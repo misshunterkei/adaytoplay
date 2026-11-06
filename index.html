@@ -8,16 +8,103 @@
     <title>A Day to Play</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>A Day to Play</h1>
-    <p>Une pause. Quelques jeux. Chaque jour.</p>
 
-    <main>
-        <h2>Le jeu du jour</h2>
-        <p>Notre premier défi est disponible !</p>
+    <div class="site-layout">
 
-    <a href="petit-bac.html">Jouer au Petit Bac</a>
-    </main>
+        <!-- Navigation latérale -->
+        <aside class="sidebar">
+            <a href="index.html" class="logo">
+                <span class="logo-symbol">✳</span>
+                <span>A Day to Play</span>
+            </a>
+
+            <nav>
+                <a href="index.html" class="active">Accueil</a>
+                <a href="#">Les jeux</a>
+                <a href="#">Statistiques</a>
+                <a href="#">À propos</a>
+            </nav>
+
+            <button id="theme-toggle" type="button">
+                ☾ Changer de thème
+            </button>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="main-content">
+
+            <header class="page-header">
+                <div>
+                    <p class="eyebrow">VENDREDI 6 NOVEMBRE 2026</p>
+                    <p class="signature">Play at your pace.</p>
+                </div>
+
+                <div class="date-card">
+                    <span>NOVEMBRE</span>
+                    <strong>06</strong>
+                    <span>VENDREDI</span>
+                </div>
+            </header>
+
+            <section class="welcome-section">
+                <p class="eyebrow">BIENVENUE SUR A DAY TO PLAY</p>
+                <h1>Un peu de jeu<br>dans ta journée.</h1>
+                <p>
+                    Trois petits défis, quelques minutes pour toi.
+                    Pas de pression, juste le plaisir de jouer.
+                </p>
+            </section>
+
+            <section class="games-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">À TOI DE JOUER</p>
+                        <h2>Les défis du jour</h2>
+                    </div>
+                    <span>03 JEUX DISPONIBLES</span>
+                </div>
+
+                <div class="games-grid">
+
+                    <article class="game-card petit-bac-card">
+                        <p class="game-number">01 / RÉFLEXION & CULTURE</p>
+                        <h3>Le Petit Bac</h3>
+                        <p>
+                            Une lettre, dix catégories.
+                            À toi de trouver les bonnes réponses !
+                        </p>
+                        <a href="petit-bac.html">Jouer au Petit Bac ↗</a>
+                    </article>
+
+                    <article class="game-card crossword-card">
+                        <p class="game-number">02 / POP CULTURE</p>
+                        <h3>Pop Culture Crossword</h3>
+                        <p>
+                            Des mots à retrouver, des univers à explorer.
+                            Connais-tu vraiment tes classiques ?
+                        </p>
+                        <a href="#">Bientôt disponible</a>
+                    </article>
+
+                    <article class="game-card mythos-card">
+                        <p class="game-number">03 / MYTHOLOGIE</p>
+                        <h3>Mythes ou mythos</h3>
+                        <p>
+                            Vraies légendes ou histoires inventées ?
+                            Démêle le vrai du faux.
+                        </p>
+                        <a href="#">Bientôt disponible</a>
+                    </article>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
     <script src="script.js"></script>
+
 </body>
 </html>
