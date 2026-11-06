@@ -335,3 +335,6 @@ a {
         gap: 10px;
     }
 }
+.petit-bac-card {
+    background: #FF0000 !important;
+}
