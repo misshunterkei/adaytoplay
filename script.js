@@ -6,8 +6,6 @@
 
 console.log("A Day to Play est prêt !");
 
-console.log("A Day to Play est prêt !");
-
 // Défi de démonstration
 const dailyChallenge = {
     letter: "C",
