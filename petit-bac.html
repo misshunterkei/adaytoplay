@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le Petit Bac quotidien de A Day to Play.">
+    <title>Le Petit Bac | A Day to Play</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">A Day to Play</a>
+        <p>Play at your pace.</p>
+    </header>
+
+    <main>
+        <section>
+            <p>LE DÉFI DU JOUR</p>
+            <h1>Le Petit Bac</h1>
+            <p>Une lettre, dix catégories. À toi de jouer !</p>
+        </section>
+
+        <section>
+            <h2>La lettre du jour</h2>
+            <p id="daily-letter">A</p>
+        </section>
+
+        <section>
+            <h2>Les catégories</h2>
+            <p>Remplis les catégories dans l'ordre que tu souhaites.</p>
+
+            <form id="petit-bac-form">
+                <div id="categories-container"></div>
+
+                <button type="submit">Valider ma partie</button>
+            </form>
+        </section>
+
+        <section id="results" hidden>
+            <h2>Ton résultat</h2>
+            <p id="score"></p>
+            <div id="corrections"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
