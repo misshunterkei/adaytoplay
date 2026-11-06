@@ -1,10 +1,14 @@
 
-/* IMPORT DE LA TYPOGRAPHIE */
+/* ========================================
+   TYPOGRAPHIE
+======================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
 
 
-/* VARIABLES ET BASE */
+/* ========================================
+   VARIABLES ET BASE
+======================================== */
 
 :root {
     --ivory: #F0F0EB;
@@ -37,8 +41,14 @@ a {
     text-decoration: none;
 }
 
+button {
+    font-family: inherit;
+}
 
-/* ORGANISATION GÉNÉRALE */
+
+/* ========================================
+   ORGANISATION GÉNÉRALE
+======================================== */
 
 .site-layout {
     display: flex;
@@ -47,6 +57,7 @@ a {
 
 .sidebar {
     width: 175px;
+    min-height: 100vh;
     padding: 35px 25px;
     border-right: 1px solid var(--border);
     display: flex;
@@ -56,13 +67,16 @@ a {
 
 .main-content {
     flex: 1;
+    min-width: 0;
     max-width: 1500px;
     margin: 0 auto;
     padding: 45px 6%;
 }
 
 
-/* LOGO ET NAVIGATION */
+/* ========================================
+   LOGO ET NAVIGATION
+======================================== */
 
 .logo {
     display: flex;
@@ -105,25 +119,29 @@ a {
     border: 1px solid var(--border);
     border-radius: 6px;
     color: var(--text);
-    font-family: inherit;
     cursor: pointer;
+    font-size: 12px;
 }
 
 
-/* EN-TÊTE ET DATE */
-
+/* ========================================
+   EN-TÊTE ET CALENDRIER
+======================================== */
 
 .page-header {
-    margin-bottom: 75px;
+    margin-bottom: 55px;
 }
 
 .welcome-heading {
     width: 100%;
 }
 
-.welcome-heading .eyebrow {
-    font-size: 14px;
-    margin-bottom: 18px;
+.eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    margin: 0 0 15px;
 }
 
 .welcome-heading h1 {
@@ -141,7 +159,7 @@ a {
 }
 
 .signature {
-    font-size: 15px;
+    font-size: 14px;
     font-style: italic;
     color: var(--muted);
     margin: 0 0 8px;
@@ -171,40 +189,23 @@ a {
 }
 
 
-/* INTRODUCTION */
-
-.welcome-section {
-    max-width: 650px;
-    margin-bottom: 85px;
-}
-
-.welcome-section h1 {
-    font-size: clamp(44px, 5vw, 72px);
-    line-height: 1.12;
-    letter-spacing: -3px;
-    margin: 22px 0;
-}
-
-.welcome-section > p:last-child {
-    max-width: 460px;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-
-/* LES JEUX DU JOUR */
+/* ========================================
+   LES DÉFIS DU JOUR
+======================================== */
 
 .section-heading {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 25px;
+    gap: 15px;
 }
 
 .section-heading h2 {
-    font-size: 29px;
-    margin: 8px 0 0;
+    font-size: 27px;
+    line-height: 1.25;
+    margin: 0;
+    letter-spacing: -0.8px;
 }
 
 .section-heading > span {
@@ -219,11 +220,15 @@ a {
     gap: 20px;
 }
 
+
+/* ========================================
+   CARTES DES JEUX
+======================================== */
+
 .game-card {
     width: min(100%, 320px);
     aspect-ratio: 1 / 1;
-    min-height: 0;
-    padding: 30px;
+    padding: 25px;
     border-radius: 7px;
     display: flex;
     flex-direction: column;
@@ -234,6 +239,8 @@ a {
 .game-card:hover {
     transform: translateY(-3px);
 }
+
+/* Couleurs des cartes */
 
 .petit-bac-card {
     background: #354D7B;
@@ -250,31 +257,36 @@ a {
     color: #F0F0EB;
 }
 
+/* Contenu des cartes */
+
 .game-number {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     color: rgba(255, 255, 255, 0.75);
+    margin: 0;
 }
 
 .game-card h3 {
-    font-size: 29px;
-    margin: 25px 0 10px;
-    letter-spacing: -1px;
+    font-size: 25px;
+    line-height: 1.25;
+    margin: 22px 0 8px;
+    letter-spacing: -0.8px;
     color: #FFFFFF;
 }
 
 .game-card > p:not(.game-number) {
-    font-size: 14px;
-    line-height: 1.8;
-    max-width: 350px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 100%;
     color: rgba(255, 255, 255, 0.88);
 }
 
 .game-card a {
     margin-top: auto;
-    padding-top: 20px;
-    font-size: 14px;
+    padding-top: 15px;
+    font-size: 13px;
     font-weight: 700;
     color: #FFFFFF;
 }
@@ -284,9 +296,12 @@ a {
 }
 
 
-/* ADAPTATION MOBILE */
+/* ========================================
+   TABLETTES
+======================================== */
 
 @media (max-width: 850px) {
+
     .sidebar {
         width: 150px;
         padding: 25px 15px;
@@ -295,15 +310,26 @@ a {
     .main-content {
         padding: 35px 4%;
     }
+
+    .game-card {
+        width: min(100%, 320px);
+    }
 }
 
+
+/* ========================================
+   MOBILES
+======================================== */
+
 @media (max-width: 600px) {
+
     .site-layout {
         flex-direction: column;
     }
 
     .sidebar {
         width: 100%;
+        min-height: auto;
         padding: 15px;
         border-right: none;
         border-bottom: 1px solid var(--border);
@@ -316,35 +342,55 @@ a {
     .sidebar nav {
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .sidebar nav a {
+        padding: 9px 10px;
     }
 
     #theme-toggle {
         margin-top: 15px;
+        align-self: flex-start;
     }
 
     .main-content {
+        width: 100%;
         padding: 25px 18px;
     }
 
     .page-header {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 
-    .welcome-section {
-        margin-bottom: 60px;
+    .welcome-heading h1 {
+        font-size: 32px;
     }
 
-    .games-grid {
-        grid-template-columns: 1fr;
+    .date-card {
+        width: 105px;
     }
 
-    .petit-bac-card {
-        grid-row: auto;
+    .date-card strong {
+        font-size: 36px;
     }
 
     .section-heading {
         align-items: flex-start;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+        justify-items: start;
+    }
+
+    .game-card {
+        width: min(100%, 320px);
     }
 }
