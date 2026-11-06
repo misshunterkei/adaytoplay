@@ -162,7 +162,7 @@ a {
 }
 
 .welcome-section h1 {
-    font-size: clamp(38px, 5vw, 65px);
+    font-size: clamp(44px, 5vw, 72px);
     line-height: 1.12;
     letter-spacing: -3px;
     margin: 22px 0;
@@ -186,7 +186,7 @@ a {
 }
 
 .section-heading h2 {
-    font-size: 25px;
+    font-size: 29px;
     margin: 8px 0 0;
 }
 
@@ -219,43 +219,47 @@ a {
 
 .petit-bac-card {
     grid-row: span 2;
-    background: #DCE2EB;
+    background: #354D7B;
+    color: #F0F0EB;
 }
 
 .crossword-card {
-    background: #E4DFED;
+    background: #66558F;
+    color: #F0F0EB;
 }
 
 .mythos-card {
-    background: #DCE7E2;
+    background: #426F66;
+    color: #F0F0EB;
 }
 
 .game-number {
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.3px;
-    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .game-card h3 {
-    font-size: 25px;
+    font-size: 29px;
     margin: 25px 0 10px;
     letter-spacing: -1px;
+    color: #FFFFFF;
 }
 
 .game-card > p:not(.game-number) {
-    font-size: 13px;
-    line-height: 1.7;
+    font-size: 14px;
+    line-height: 1.8;
     max-width: 350px;
-    color: #555966;
+    color: rgba(255, 255, 255, 0.88);
 }
 
 .game-card a {
     margin-top: auto;
     padding-top: 20px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
-    color: var(--charcoal);
+    color: #FFFFFF;
 }
 
 .game-card a:hover {
