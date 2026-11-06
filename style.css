@@ -46,7 +46,7 @@ a {
 }
 
 .sidebar {
-    width: 230px;
+    width: 175px;
     padding: 35px 25px;
     border-right: 1px solid var(--border);
     display: flex;
@@ -198,13 +198,12 @@ a {
 
 .games-grid {
     display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 18px;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 .game-card {
-    min-height: 260px;
+    min-height: 220px;
     padding: 30px;
     border-radius: 7px;
     display: flex;
@@ -218,7 +217,6 @@ a {
 }
 
 .petit-bac-card {
-    grid-row: span 2;
     background: #354D7B;
     color: #F0F0EB;
 }
@@ -271,16 +269,12 @@ a {
 
 @media (max-width: 850px) {
     .sidebar {
-        width: 180px;
+        width: 150px;
         padding: 25px 15px;
     }
 
     .main-content {
         padding: 35px 4%;
-    }
-
-    .games-grid {
-        grid-template-columns: 1fr 1fr;
     }
 }
 
