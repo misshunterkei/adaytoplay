@@ -88,15 +88,18 @@ button {
     padding: 45px 6%;
 }
 
+
 /* LOGO */
 
 .logo {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 7px;
+    gap: 12px;
     margin-bottom: 75px;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .logo-symbol {
@@ -109,10 +112,17 @@ button {
 .logo-name {
     display: flex;
     flex-direction: column;
-    gap: 1px;
-    font-size: 15px;
-    line-height: 1.12;
-    letter-spacing: -0.5px;
+    align-items: center;
+    gap: 2px;
+    font-size: 13px;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+.logo-dot {
+    font-size: 10px;
+    opacity: 0.55;
+    font-weight: 400;
 }
 
 /* NAVIGATION */
