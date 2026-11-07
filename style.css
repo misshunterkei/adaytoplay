@@ -80,16 +80,28 @@ button {
 
 .logo {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 9px;
     font-size: 17px;
     font-weight: 700;
     margin-bottom: 75px;
 }
 
 .logo-symbol {
-    font-size: 27px;
+    font-size: 25px;
+    line-height: 1;
     color: var(--slate);
+    flex-shrink: 0;
+}
+
+.logo-name {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    font-size: 16px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    font-weight: 700;
 }
 
 .sidebar nav {
