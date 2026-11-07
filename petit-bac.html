@@ -8,43 +8,107 @@
     <title>Le Petit Bac | A Day to Play</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <a href="index.html">A Day to Play</a>
-        <p>Play at your pace.</p>
-    </header>
+<div class="site-layout">
 
-    <main>
-        <section>
-            <p>LE DÉFI DU JOUR</p>
+    <aside class="sidebar">
+        <a href="index.html" class="logo" aria-label="A Day to Play - Accueil">
+            <span class="logo-symbol">✳</span>
+            <span class="logo-name">
+                <span>A</span>
+                <span>Day</span>
+                <span>to</span>
+                <span>Play</span>
+            </span>
+        </a>
+
+        <nav class="sidebar-nav" aria-label="Navigation principale">
+            <a href="index.html" aria-label="Accueil" title="Accueil">
+                <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3.5 10.5L12 3.5L20.5 10.5V20H3.5V10.5Z"/>
+                    <path d="M9 20V13H15V20"/>
+                </svg>
+            </a>
+
+            <a href="index.html#games" class="active" aria-label="Jeux" title="Jeux">
+                <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6.5 8H17.5C19.5 8 20.5 9.5 21 12L22 17C22.4 19 20.5 20 19 19L15.5 16H8.5L5 19C3.5 20 1.6 19 2 17L3 12C3.5 9.5 4.5 8 6.5 8Z"/>
+                    <path d="M7 11V15M5 13H9"/>
+                    <circle cx="16.5" cy="12" r="0.8"/>
+                    <circle cx="19" cy="14.5" r="0.8"/>
+                </svg>
+            </a>
+
+            <a href="index.html#streak" aria-label="Statistiques" title="Statistiques">
+                <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 20V11H8V20"/>
+                    <path d="M10 20V5H14V20"/>
+                    <path d="M16 20V8H20V20"/>
+                    <path d="M3 20.5H21"/>
+                </svg>
+            </a>
+
+            <a href="index.html#about" aria-label="À propos" title="À propos">
+                <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M9.5 9A2.6 2.6 0 0 1 12 7.5C13.5 7.5 14.5 8.5 14.5 9.8C14.5 11.5 12 12 12 14"/>
+                    <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none"/>
+                </svg>
+            </a>
+        </nav>
+
+        <button id="theme-toggle" type="button" aria-label="Changer de thème">
+            <span id="theme-icon">☾</span>
+        </button>
+    </aside>
+
+    <main class="main-content game-page">
+
+        <header class="game-page-header">
+            <a href="index.html" class="back-link">← Retour à l'accueil</a>
+            <p class="eyebrow">LE DÉFI DU JOUR · 01</p>
             <h1>Le Petit Bac</h1>
             <p>Une lettre, dix catégories. À toi de jouer !</p>
-        </section>
+        </header>
 
-        <section>
-            <h2>La lettre du jour</h2>
-            <p id="daily-letter">A</p>
+        <section class="letter-panel">
+            <h2>LA LETTRE DU JOUR</h2>
+            <div id="daily-letter" class="daily-letter">C</div>
         </section>
 
         <section>
             <h2>Les catégories</h2>
-            <p>Remplis les catégories dans l'ordre que tu souhaites.</p>
+            <p class="instructions">
+                Trouve une réponse pour chaque catégorie.
+                Toutes tes réponses doivent commencer par la lettre du jour.
+                Tu peux remplir les catégories dans l'ordre que tu souhaites.
+            </p>
 
             <form id="petit-bac-form">
                 <div id="categories-container"></div>
 
-                <button type="submit">Valider ma partie</button>
+                <button class="primary-button" type="submit">
+                    Valider ma partie
+                </button>
             </form>
         </section>
 
         <section id="results" hidden>
             <h2>Ton résultat</h2>
             <p id="score"></p>
+            <p class="instructions">
+                Chaque réponse validée rapporte 10 points.
+            </p>
             <div id="corrections"></div>
+            <a href="index.html" class="back-link">← Retour à l'accueil</a>
         </section>
-    </main>
 
-    <script src="script.js"></script>
+    </main>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
