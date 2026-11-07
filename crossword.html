@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Culture Crossword — A Day to Play</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="site-layout">
+
+    <!-- MENU LATÉRAL -->
+    <aside class="sidebar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-symbol">✳</span>
+            <span class="logo-name">
+                <span>A</span>
+                <span class="logo-dot">·</span>
+                <span>Day</span>
+                <span class="logo-dot">·</span>
+                <span>to</span>
+                <span class="logo-dot">·</span>
+                <span>Play</span>
+            </span>
+        </a>
+
+        <nav class="sidebar-nav">
+            <a href="index.html" aria-label="Accueil">
+                <svg class="nav-icon" viewBox="0 0 24 24">
+                    <path d="m3 10 9-7 9 7"></path>
+                    <path d="M5 9v12h14V9"></path>
+                    <path d="M9 21v-7h6v7"></path>
+                </svg>
+            </a>
+
+            <a href="index.html#games" class="active" aria-label="Jeux">
+                <svg class="nav-icon" viewBox="0 0 24 24">
+                    <path d="M6 8h12a4 4 0 0 1 3.8 5l-1 4a2 2 0 0 1-3.2 1.1L14 15H10l-3.6 3.1A2 2 0 0 1 3.2 17l-1-4A4 4 0 0 1 6 8Z"></path>
+                    <path d="M7 11v4M5 13h4M16 12h.01M18 14h.01"></path>
+                </svg>
+            </a>
+
+            <a href="index.html#statistics" aria-label="Statistiques">
+                <svg class="nav-icon" viewBox="0 0 24 24">
+                    <path d="M4 20V10"></path>
+                    <path d="M10 20V4"></path>
+                    <path d="M16 20v-7"></path>
+                    <path d="M22 20H2"></path>
+                </svg>
+            </a>
+
+            <a href="index.html#about" aria-label="À propos">
+                <svg class="nav-icon" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-1.2 1-1.7 1.4-1.7 3"></path>
+                    <path d="M12 17h.01"></path>
+                </svg>
+            </a>
+        </nav>
+
+        <button id="theme-toggle" aria-label="Changer de thème">
+            <span id="theme-icon">☾</span>
+        </button>
+
+    </aside>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="main-content game-page crossword-page">
+
+        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+
+        <header class="game-page-header">
+            <p class="eyebrow">LE DÉFI DU JOUR · N° 002</p>
+            <h1>Pop Culture Crossword</h1>
+            <p>
+                Quelques définitions, un univers à explorer.
+                À toi de retrouver les mots !
+            </p>
+        </header>
+
+        <!-- PRÉSENTATION DU DÉFI -->
+        <section class="crossword-intro">
+            <div>
+                <p class="eyebrow">THÈME DU JOUR</p>
+                <h2 id="crossword-theme">Un univers magique</h2>
+                <p id="crossword-description">
+                    Des personnages, des lieux et des objets à retrouver.
+                </p>
+            </div>
+
+            <div class="crossword-progress">
+                <span class="crossword-progress-label">MOTS TROUVÉS</span>
+                <strong id="words-found">0 / 5</strong>
+            </div>
+        </section>
+
+        <!-- VIES -->
+        <section class="crossword-lives-panel">
+            <div>
+                <strong>TES VIES</strong>
+                <p>Chaque mauvaise validation te coûte une vie.</p>
+            </div>
+
+            <div id="crossword-lives" class="crossword-lives"
+                 aria-label="3 vies restantes">
+                <span class="life">♥</span>
+                <span class="life">♥</span>
+                <span class="life">♥</span>
+            </div>
+        </section>
+
+        <!-- JEU -->
+        <section class="crossword-game-layout">
+
+            <!-- DÉFINITIONS -->
+            <div class="crossword-clues">
+
+                <div class="crossword-clues-heading">
+                    <h2>Les définitions</h2>
+                    <p>Entre ta réponse puis valide chaque mot individuellement.</p>
+                </div>
+
+                <div class="clue-group">
+                    <h3>HORIZONTAL</h3>
+                    <div id="crossword-across"></div>
+                </div>
+
+                <div class="clue-group">
+                    <h3>VERTICAL</h3>
+                    <div id="crossword-down"></div>
+                </div>
+
+            </div>
+
+            <!-- GRILLE -->
+            <div class="crossword-board-panel">
+                <h2>La grille</h2>
+
+                <div id="crossword-grid" class="crossword-grid"
+                     aria-label="Grille de mots croisés">
+                </div>
+
+                <p class="crossword-grid-caption">
+                    Les lettres apparaissent dans la grille lorsque tu trouves un mot.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- ABANDON -->
+        <div class="crossword-abandon">
+            <button type="button" id="abandon-crossword" class="secondary-button">
+                Abandonner la partie
+            </button>
+        </div>
+
+        <!-- RÉSULTATS -->
+        <section id="crossword-results" class="crossword-results" hidden>
+            <p class="eyebrow">FIN DU DÉFI</p>
+            <h2 id="crossword-result-title">Partie terminée</h2>
+            <p id="crossword-result-message"></p>
+
+            <div id="crossword-solutions"></div>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+<script src="crossword.js"></script>
+
+</body>
+</html>
