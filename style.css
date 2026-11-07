@@ -20,12 +20,19 @@
 }
 
 body.dark-theme {
-    --background: #20222B;
-    --text: #F0F0EB;
-    --muted: #A6A8B2;
-    --surface: #292C37;
-    --border: #3B3E49;
-    --active: #363B49;
+    --background: #211D25;
+    --text: #E8E0D8;
+    --muted: #B5AAB2;
+    --surface: #342832;
+    --border: #51414D;
+    --active: #453640;
+
+    --ivory: #E8E0D8;
+    --charcoal: #211D25;
+    --slate: #536FA8;
+    --violet: #8B7A9F;
+    --mineral: #A4B6A2;
+    --yellow: #D8BD4D;
 }
 
 /* BASE */
