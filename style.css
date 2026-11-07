@@ -129,6 +129,7 @@ button {
 ======================================== */
 
 .page-header {
+    position: relative;
     margin-bottom: 55px;
 }
 
@@ -148,24 +149,25 @@ button {
     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.2;
     letter-spacing: -1.5px;
-    margin: 0 0 22px;
+    margin: 0;
 }
 
 .welcome-footer {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 20px;
+    display: block;
 }
 
 .signature {
     font-size: 14px;
-    font-style: italic;
+    font-style: normal;
+    font-weight: 400;
     color: var(--muted);
-    margin: 0 0 8px;
+    margin: 18px 0 0;
 }
 
 .date-card {
+    position: absolute;
+    top: 35px;
+    right: 0;
     width: 125px;
     padding: 13px;
     background: var(--charcoal);
@@ -175,7 +177,6 @@ button {
     align-items: center;
     gap: 5px;
     border-radius: 5px;
-    flex-shrink: 0;
 }
 
 .date-card span {
