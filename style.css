@@ -369,12 +369,14 @@ button {
     }
 
     .date-card {
-        width: 105px;
-    }
+    position: static;
+    width: 105px;
+    margin-top: 20px;
+}
 
-    .date-card strong {
-        font-size: 36px;
-    }
+.date-card strong {
+    font-size: 36px;
+}
 
     .section-heading {
         align-items: flex-start;
