@@ -89,6 +89,7 @@ button {
 }
 
 
+
 /* LOGO */
 
 .logo {
@@ -111,37 +112,26 @@ button {
 .logo-name {
     display: flex;
     flex-direction: column;
-    gap: 1px;
-    font-size: 15px;
-    line-height: 1.12;
-    letter-spacing: -0.5px;
-}
-
-/* LOGO */
-
-.logo {
-    display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    gap: 7px;
-    margin-bottom: 75px;
+    width: 20px;
+    gap: 2px;
+    font-size: 13px;
     font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0;
 }
 
-.logo-symbol {
-    font-size: 24px;
-    line-height: 1;
-    color: var(--slate);
-    flex-shrink: 0;
+.logo-name > span {
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
-.logo-name {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    font-size: 15px;
-    line-height: 1.12;
-    letter-spacing: -0.5px;
+.logo-dot {
+    font-size: 10px;
+    opacity: 0.55;
+    font-weight: 400;
 }
 
 /* NAVIGATION */
