@@ -8,197 +8,184 @@
     <title>A Day to Play</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div class="site-layout">
+<div class="site-layout">
 
-        <!-- Navigation latérale -->
-        <aside class="sidebar">
-            <a href="index.html" class="logo">
-    <span class="logo-symbol">✳</span>
-    <span class="logo-name">
-        <span>A</span>
-        <span>Day</span>
-        <span>to</span>
-        <span>Play</span>
-    </span>
-</a>
+    <aside class="sidebar">
+        <a href="index.html" class="logo" aria-label="A Day to Play - Accueil">
+            <span class="logo-symbol">✳</span>
+            <span class="logo-name">
+                <span>A</span>
+                <span>Day</span>
+                <span>to</span>
+                <span>Play</span>
+            </span>
+        </a>
 
-           <nav>
-    <!-- Accueil -->
-    <a href="index.html" class="active" aria-label="Accueil">
-        <svg class="nav-icon" viewBox="0 0 24 24">
-            <path d="M3.5 10.5L12 3.5L20.5 10.5V20H3.5V10.5Z"/>
-            <path d="M9 20V13H15V20"/>
-        </svg>
-    </a>
+        <nav class="sidebar-nav" aria-label="Navigation principale">
+            <a href="index.html" class="active" aria-label="Accueil" title="Accueil">
+                <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3.5 10.5L12 3.5L20.5 10.5V20H3.5V10.5Z"/>
+                    <path d="M9 20V13H15V20"/>
+                </svg>
+            </a>
 
-    <!-- Jeux -->
-    <a href="jeux.html" aria-label="Jeux">
-        <svg class="nav-icon" viewBox="0 0 24 24">
-            <path d="M6.5 8H17.5C19.5 8 20.5 9.5 21 12L22 17C22.4 19 20.5 20 19 19L15.5 16H8.5L5 19C3.5 20 1.6 19 2 17L3 12C3.5 9.5 4.5 8 6.5 8Z"/>
-            <path d="M7 11V15M5 13H9"/>
-            <circle cx="16.5" cy="12" r="0.8"/>
-            <circle cx="19" cy="14.5" r="0.8"/>
-        </svg>
-    </a>
+            <a href="#games" aria-label="Jeux" title="Jeux">
+                <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6.5 8H17.5C19.5 8 20.5 9.5 21 12L22 17C22.4 19 20.5 20 19 19L15.5 16H8.5L5 19C3.5 20 1.6 19 2 17L3 12C3.5 9.5 4.5 8 6.5 8Z"/>
+                    <path d="M7 11V15M5 13H9"/>
+                    <circle cx="16.5" cy="12" r="0.8"/>
+                    <circle cx="19" cy="14.5" r="0.8"/>
+                </svg>
+            </a>
 
-    <!-- Statistiques -->
-    <a href="statistiques.html" aria-label="Statistiques">
-        <svg class="nav-icon" viewBox="0 0 24 24">
-            <path d="M4 20V11H8V20"/>
-            <path d="M10 20V5H14V20"/>
-            <path d="M16 20V8H20V20"/>
-            <path d="M3 20.5H21"/>
-        </svg>
-    </a>
+            <a href="#streak" aria-label="Statistiques" title="Statistiques">
+                <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 20V11H8V20"/>
+                    <path d="M10 20V5H14V20"/>
+                    <path d="M16 20V8H20V20"/>
+                    <path d="M3 20.5H21"/>
+                </svg>
+            </a>
 
-    <!-- À propos -->
-    <a href="apropos.html" aria-label="À propos">
-        <svg class="nav-icon" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M9.5 9A2.6 2.6 0 0 1 12 7.5C13.5 7.5 14.5 8.5 14.5 9.8C14.5 11.5 12 12 12 14"/>
-            <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none"/>
-        </svg>
-    </a>
-</nav>
+            <a href="#about" aria-label="À propos" title="À propos">
+                <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M9.5 9A2.6 2.6 0 0 1 12 7.5C13.5 7.5 14.5 8.5 14.5 9.8C14.5 11.5 12 12 12 14"/>
+                    <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none"/>
+                </svg>
+            </a>
+        </nav>
 
-            <button id="theme-toggle" type="button">
-                ☾ Changer de thème
-            </button>
-        </aside>
+        <button id="theme-toggle" type="button" aria-label="Changer de thème">
+            <span id="theme-icon">☾</span>
+        </button>
+    </aside>
 
-        <!-- Contenu principal -->
-        <main class="main-content">  
-            
+    <main class="main-content">
 
-            <header class="page-header">
-    <div class="welcome-heading">
-        <p class="eyebrow">BIENVENUE SUR A DAY TO PLAY</p>
-
-        <h1>Et si on jouait aujourd'hui ?</h1>
-
-        <div class="welcome-footer">
-            <p class="signature">Play at your pace.</p>
-
-            <div class="date-card">
-                <span>VENDREDI</span>
-                <strong>06</strong>
-                <span>NOVEMBRE</span>
+        <header class="page-header">
+            <div class="welcome-heading">
+                <p class="eyebrow">BIENVENUE SUR A DAY TO PLAY</p>
+                <h1>Et si on jouait aujourd'hui ?</h1>
+                <p class="signature">Play at your pace.</p>
             </div>
-        </div>
-    </div>
-</header>
 
+            <div class="date-card" aria-label="Date du jour">
+                <span id="date-weekday">---</span>
+                <strong id="date-day">--</strong>
+                <span id="date-month">---</span>
+            </div>
+        </header>
 
+        <section class="games-section" id="games">
+            <div class="section-heading">
+                <h2>Les défis du jour</h2>
+                <span>03 JEUX DISPONIBLES</span>
+            </div>
 
-            <section class="games-section">
-                <div class="section-heading">
-                    <div>
-                        <h2>Les défis du jour</h2>
+            <div class="games-grid">
+
+                <article class="game-card petit-bac-card">
+                    <div class="game-card-inner">
+                        <div class="game-card-face game-card-front">
+                            <p class="game-number">01 / RÉFLEXION & CULTURE</p>
+                            <h3>Le Petit Bac</h3>
+                            <p>1 lettre, 10 catégories.</p>
+                            <span class="card-hint">Survole pour découvrir ↗</span>
+                        </div>
+                        <div class="game-card-face game-card-back">
+                            <span class="back-number">01</span>
+                            <h3>À toi de jouer !</h3>
+                            <p>Une lettre, dix catégories. Combien de réponses trouveras-tu ?</p>
+                            <a href="petit-bac.html">Jouer au Petit Bac ↗</a>
+                        </div>
                     </div>
-                    <span>03 JEUX DISPONIBLES</span>
-                </div>
-                
-<div class="games-grid">
+                </article>
 
-    <!-- LE PETIT BAC -->
-    <article class="game-card petit-bac-card">
-        <div class="game-card-inner">
+                <article class="game-card crossword-card">
+                    <div class="game-card-inner">
+                        <div class="game-card-face game-card-front">
+                            <p class="game-number">02 / POP CULTURE</p>
+                            <h3>Pop Culture Crossword</h3>
+                            <p>Connais-tu vraiment tes classiques ?</p>
+                            <span class="card-hint">Survole pour découvrir ↗</span>
+                        </div>
+                        <div class="game-card-face game-card-back">
+                            <span class="back-number">02</span>
+                            <h3>Bientôt disponible</h3>
+                            <p>Les références pop culture n'auront bientôt plus de secrets pour toi.</p>
+                            <span class="coming-soon">JEU EN PRÉPARATION</span>
+                        </div>
+                    </div>
+                </article>
 
-            <div class="game-card-face game-card-front">
-                <p class="game-number">01 / RÉFLEXION & CULTURE</p>
-                <h3>Le Petit Bac</h3>
-                <p>1 lettre, 10 catégories.</p>
-                <span class="card-hint">Survole pour découvrir ↗</span>
+                <article class="game-card mythos-card">
+                    <div class="game-card-inner">
+                        <div class="game-card-face game-card-front">
+                            <p class="game-number">03 / MYTHOLOGIE</p>
+                            <h3>Mythes ou mythos</h3>
+                            <p>Vraies légendes ou histoires inventées ?</p>
+                            <span class="card-hint">Survole pour découvrir ↗</span>
+                        </div>
+                        <div class="game-card-face game-card-back">
+                            <span class="back-number">03</span>
+                            <h3>Bientôt disponible</h3>
+                            <p>Mythes, légendes et croyances : sauras-tu démêler le vrai du faux ?</p>
+                            <span class="coming-soon">JEU EN PRÉPARATION</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card upcoming-card">
+                    <div class="upcoming-content">
+                        <span class="plus-symbol">+</span>
+                        <h3>Jeu à venir</h3>
+                        <p>Une nouvelle expérience se prépare.</p>
+                    </div>
+                </article>
+
+                <article class="game-card upcoming-card">
+                    <div class="upcoming-content">
+                        <span class="plus-symbol">+</span>
+                        <h3>Jeu à venir</h3>
+                        <p>Une nouvelle expérience se prépare.</p>
+                    </div>
+                </article>
+
+                <article class="game-card upcoming-card">
+                    <div class="upcoming-content">
+                        <span class="plus-symbol">+</span>
+                        <h3>Jeu à venir</h3>
+                        <p>Une nouvelle expérience se prépare.</p>
+                    </div>
+                </article>
+
             </div>
+        </section>
 
-            <div class="game-card-face game-card-back">
-                <span class="back-number">01</span>
-                <h3>À toi de jouer !</h3>
-                <p>Une lettre, dix catégories. Combien de réponses trouveras-tu ?</p>
-                <a href="petit-bac.html">Jouer au Petit Bac ↗</a>
+        <section class="streak-section" id="streak">
+            <div>
+                <p class="eyebrow">TA RÉGULARITÉ</p>
+                <h2>La série continue</h2>
+                <p class="streak-description">Joue à au moins un jeu par jour pour faire grandir ta série.</p>
             </div>
-
-        </div>
-    </article>
-
-    <!-- POP CULTURE CROSSWORD -->
-    <article class="game-card crossword-card">
-        <div class="game-card-inner">
-
-            <div class="game-card-face game-card-front">
-                <p class="game-number">02 / POP CULTURE</p>
-                <h3>Pop Culture Crossword</h3>
-                <p>Connais-tu vraiment tes classiques ?</p>
-                <span class="card-hint">Survole pour découvrir ↗</span>
+            <div class="streak-display">
+                <strong id="streak-count">0</strong>
+                <span>jour(s) consécutif(s)</span>
             </div>
+            <div class="streak-days" id="streak-days" aria-label="Historique des sept derniers jours"></div>
+        </section>
 
-            <div class="game-card-face game-card-back">
-                <span class="back-number">02</span>
-                <h3>Bientôt disponible</h3>
-                <p>Les références pop culture n'auront bientôt plus de secrets pour toi.</p>
-                <span class="coming-soon">JEU EN PRÉPARATION</span>
-            </div>
+        <footer class="site-footer" id="about">
+            <span>A Day to Play</span>
+            <span>Play at your pace.</span>
+        </footer>
 
-        </div>
-    </article>
-
-    <!-- MYTHES OU MYTHOS -->
-    <article class="game-card mythos-card">
-        <div class="game-card-inner">
-
-            <div class="game-card-face game-card-front">
-                <p class="game-number">03 / MYTHOLOGIE</p>
-                <h3>Mythes ou mythos</h3>
-                <p>Vraies légendes ou histoires inventées ?</p>
-                <span class="card-hint">Survole pour découvrir ↗</span>
-            </div>
-
-            <div class="game-card-face game-card-back">
-                <span class="back-number">03</span>
-                <h3>Bientôt disponible</h3>
-                <p>Mythes, légendes et croyances : sauras-tu démêler le vrai du faux ?</p>
-                <span class="coming-soon">JEU EN PRÉPARATION</span>
-            </div>
-
-        </div>
-    </article>
-
-    <!-- EMPLACEMENTS FUTURS -->
-    <article class="game-card upcoming-card">
-        <div class="upcoming-content">
-            <span class="plus-symbol">+</span>
-            <h3>Jeu à venir</h3>
-            <p>Une nouvelle expérience se prépare.</p>
-        </div>
-    </article>
-
-    <article class="game-card upcoming-card">
-        <div class="upcoming-content">
-            <span class="plus-symbol">+</span>
-            <h3>Jeu à venir</h3>
-            <p>Une nouvelle expérience se prépare.</p>
-        </div>
-    </article>
-
-    <article class="game-card upcoming-card">
-        <div class="upcoming-content">
-            <span class="plus-symbol">+</span>
-            <h3>Jeu à venir</h3>
-            <p>Une nouvelle expérience se prépare.</p>
-        </div>
-    </article>
-
+    </main>
 </div>
 
-            </section>
-
-        </main>
-    </div>
-
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
