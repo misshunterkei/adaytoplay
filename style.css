@@ -416,11 +416,13 @@ button {
 }
 
 .nav-icon {
-    width: 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 19px;
-    color: inherit;
+    width: 21px;
+    height: 21px;
+    display: block;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
     flex-shrink: 0;
 }
