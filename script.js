@@ -6,6 +6,7 @@
 
 console.log("A Day to Play est prêt !");
 
+
 /* -----------------------------------------
    DATE : HEURE DE PARIS
 ----------------------------------------- */
@@ -61,6 +62,7 @@ function updateDate() {
     }
 }
 
+
 /* -----------------------------------------
    THÈME CLAIR / SOMBRE
 ----------------------------------------- */
@@ -88,8 +90,9 @@ if (themeToggle) {
     });
 }
 
+
 /* -----------------------------------------
-   SÉRIE DE CONNEXION
+   SÉRIE QUOTIDIENNE
 ----------------------------------------- */
 
 function getPlayedDays() {
@@ -171,6 +174,7 @@ function renderStreak() {
     }
 }
 
+
 /* -----------------------------------------
    DÉFI DU PETIT BAC
    BASE DE DÉMONSTRATION
@@ -191,11 +195,6 @@ const dailyChallenge = {
         "Mythologie"
     ]
 };
-
-/*
-    Réponses de démonstration pour la lettre C.
-    Les listes seront enrichies progressivement.
-*/
 
 const acceptedAnswers = {
     "Pays": ["canada", "chine", "chili", "colombie", "cuba", "cambodge", "cameroun", "croatie", "chypre", "chad", "comores", "congo", "cap vert", "costa rica", "corée du sud", "corée du nord"],
@@ -223,6 +222,40 @@ const answerExamples = {
     "Mythologie": "Cerbère, Cyclope, Circé..."
 };
 
+
+/* -----------------------------------------
+   SAUVEGARDE DU PETIT BAC
+----------------------------------------- */
+
+function getPetitBacStorageKey() {
+    return `adp-petit-bac-${getParisDate()}`;
+}
+
+function loadPetitBacState() {
+    try {
+        const saved = localStorage.getItem(getPetitBacStorageKey());
+        return saved ? JSON.parse(saved) : null;
+    } catch {
+        return null;
+    }
+}
+
+function savePetitBacState(state) {
+    try {
+        localStorage.setItem(
+            getPetitBacStorageKey(),
+            JSON.stringify(state)
+        );
+    } catch (error) {
+        console.error("Impossible de sauvegarder la partie.", error);
+    }
+}
+
+
+/* -----------------------------------------
+   NORMALISATION DES RÉPONSES
+----------------------------------------- */
+
 function normalizeAnswer(answer) {
     return answer
         .trim()
@@ -234,6 +267,78 @@ function normalizeAnswer(answer) {
         .replace(/\s+/g, " ");
 }
 
+
+/* -----------------------------------------
+   AFFICHAGE DES RÉSULTATS
+----------------------------------------- */
+
+function displayPetitBacResults(answers, savedScore = null) {
+    const corrections = document.getElementById("corrections");
+    const scoreElement = document.getElementById("score");
+    const results = document.getElementById("results");
+
+    if (!corrections || !scoreElement || !results) return;
+
+    corrections.innerHTML = "";
+
+    let score = 0;
+
+    dailyChallenge.categories.forEach((category, index) => {
+        const answer = answers[index] || "";
+        const normalized = normalizeAnswer(answer);
+
+        const accepted = acceptedAnswers[category].map(normalizeAnswer);
+
+        const startsWithLetter = normalized.startsWith(
+            normalizeAnswer(dailyChallenge.letter)
+        );
+
+        const isValid = normalized !== ""
+            && startsWithLetter
+            && accepted.includes(normalized);
+
+        if (isValid) {
+            score += 10;
+        }
+
+        const correction = document.createElement("div");
+        correction.className = "correction-item";
+
+        const status = document.createElement("span");
+        status.className = isValid ? "answer-good" : "answer-bad";
+        status.textContent = isValid ? "✓ Correct" : "✗ Non validé";
+
+        const detail = document.createElement("p");
+        detail.textContent = answer
+            ? `Ta réponse : ${answer}`
+            : "Tu n'as pas proposé de réponse.";
+
+        const examples = document.createElement("p");
+        examples.textContent = `Exemples acceptés : ${answerExamples[category]}`;
+
+        correction.appendChild(status);
+        correction.appendChild(detail);
+        correction.appendChild(examples);
+
+        corrections.appendChild(correction);
+    });
+
+    if (savedScore !== null) {
+        score = savedScore;
+    }
+
+    scoreElement.innerHTML =
+        `<span class="score-number">${score}</span> / 100 points`;
+
+    results.hidden = false;
+    return score;
+}
+
+
+/* -----------------------------------------
+   INITIALISATION DU PETIT BAC
+----------------------------------------- */
+
 function initializePetitBac() {
     const letterElement = document.getElementById("daily-letter");
     const categoriesContainer = document.getElementById("categories-container");
@@ -243,6 +348,8 @@ function initializePetitBac() {
 
     letterElement.textContent = dailyChallenge.letter;
     categoriesContainer.innerHTML = "";
+
+    const savedState = loadPetitBacState();
 
     dailyChallenge.categories.forEach((category, index) => {
         const block = document.createElement("div");
@@ -259,66 +366,91 @@ function initializePetitBac() {
         input.placeholder = `Une réponse en ${dailyChallenge.letter}...`;
         input.autocomplete = "off";
 
+        if (savedState && savedState.answers) {
+            input.value = savedState.answers[index] || "";
+        }
+
+        if (savedState && savedState.status === "completed") {
+            input.disabled = true;
+        }
+
+        input.addEventListener("input", () => {
+            const currentState = loadPetitBacState();
+
+            if (currentState && currentState.status === "completed") {
+                return;
+            }
+
+            const answers = dailyChallenge.categories.map((_, i) => {
+                const field = document.getElementById(`answer-${i}`);
+                return field ? field.value : "";
+            });
+
+            savePetitBacState({
+                date: getParisDate(),
+                status: "in-progress",
+                answers: answers
+            });
+        });
+
         block.appendChild(label);
         block.appendChild(input);
         categoriesContainer.appendChild(block);
     });
 
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
+    const submitButton = form.querySelector("button[type='submit']");
 
-        let score = 0;
-        const corrections = document.getElementById("corrections");
-        const scoreElement = document.getElementById("score");
-        const results = document.getElementById("results");
+    if (savedState && savedState.status === "completed") {
+        displayPetitBacResults(
+            savedState.answers,
+            savedState.score
+        );
 
-        corrections.innerHTML = "";
-
-        dailyChallenge.categories.forEach((category, index) => {
-            const input = document.getElementById(`answer-${index}`);
-            const answer = input.value.trim();
-            const normalized = normalizeAnswer(answer);
-
-            const accepted = acceptedAnswers[category].map(normalizeAnswer);
-            const isValid = normalized !== "" && accepted.includes(normalized);
-
-            if (isValid) {
-                score += 10;
-            }
-
-            const correction = document.createElement("div");
-            correction.className = "correction-item";
-
-            const status = document.createElement("span");
-            status.className = isValid ? "answer-good" : "answer-bad";
-            status.textContent = isValid ? "✓ Correct" : "✗ Non validé";
-
-            const detail = document.createElement("p");
-            detail.textContent = answer
-                ? `Ta réponse : ${answer}`
-                : "Tu n'as pas proposé de réponse.";
-
-            const examples = document.createElement("p");
-            examples.textContent = `Exemples acceptés : ${answerExamples[category]}`;
-
-            correction.appendChild(status);
-            correction.appendChild(detail);
-            correction.appendChild(examples);
-            corrections.appendChild(correction);
-
-            input.disabled = true;
-        });
-
-        scoreElement.innerHTML = `<span class="score-number">${score}</span> / 100 points`;
-        results.hidden = false;
-
-        markTodayAsPlayed();
-
-        const submitButton = form.querySelector("button[type='submit']");
         submitButton.disabled = true;
         submitButton.textContent = "Partie terminée";
 
+        return;
+    }
+
+    if (savedState && savedState.status === "in-progress") {
+        submitButton.textContent = "Reprendre ma partie";
+    }
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const currentState = loadPetitBacState();
+
+        if (currentState && currentState.status === "completed") {
+            return;
+        }
+
+        const answers = dailyChallenge.categories.map((_, index) => {
+            const input = document.getElementById(`answer-${index}`);
+            return input ? input.value.trim() : "";
+        });
+
+        const score = displayPetitBacResults(answers);
+
+        savePetitBacState({
+            date: getParisDate(),
+            status: "completed",
+            answers: answers,
+            score: score
+        });
+
+        dailyChallenge.categories.forEach((_, index) => {
+            const input = document.getElementById(`answer-${index}`);
+            if (input) input.disabled = true;
+        });
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Partie terminée";
+
+        markTodayAsPlayed();
         renderStreak();
+
+        const results = document.getElementById("results");
 
         results.scrollIntoView({
             behavior: "smooth",
@@ -327,16 +459,13 @@ function initializePetitBac() {
     });
 }
 
+
 /* -----------------------------------------
-   INITIALISATION
+   INITIALISATION GÉNÉRALE
 ----------------------------------------- */
 
 updateDate();
 renderStreak();
 initializePetitBac();
 
-/*
-   Actualise la date lorsque la page reste ouverte
-   au passage de minuit à Paris.
-*/
 setInterval(updateDate, 30000);
