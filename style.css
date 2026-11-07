@@ -320,6 +320,22 @@ button {
     background: #426F66;
     color: #F0F0EB;
 }
+/* Cartes - Thème sombre */
+
+body.dark-theme .petit-bac-card .game-card-face {
+    background: #754653;
+    color: #E8E0D8;
+}
+
+body.dark-theme .crossword-card .game-card-face {
+    background: #8B7A9F;
+    color: #211D25;
+}
+
+body.dark-theme .mythos-card .game-card-face {
+    background: #647F70;
+    color: #E8E0D8;
+}
 
 .game-number {
     font-size: 10px;
