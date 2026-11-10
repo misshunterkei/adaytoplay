@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>A Day to Play</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#accueil" aria-label="A Day to Play, accueil">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="brand-name">A<br>Day<br>to<br>Play</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#accueil" class="nav-link active" data-page="accueil"><span class="nav-icon">⌂</span><span>Accueil</span></a>
+        <a href="#jeux" class="nav-link" data-page="jeux"><span class="nav-icon">▦</span><span>Jeux</span></a>
+        <a href="#stats" class="nav-link" data-page="stats"><span class="nav-icon">▥</span><span>Stats</span></a>
+        <a href="#apropos" class="nav-link" data-page="apropos"><span class="nav-icon">ⓘ</span><span>À propos</span></a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Activer le thème sombre"><span id="theme-icon">☾</span><span class="theme-label">Thème</span></button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="topbar-note">
+          <span class="eyebrow">LE RENDEZ-VOUS DU JOUR</span>
+          <p id="daily-note">Une nouvelle grille, trois niveaux, à toi de jouer.</p>
+        </div>
+        <div class="date-card" aria-label="Date du jour">
+          <span id="date-weekday">MARDI</span>
+          <strong id="date-day">10</strong>
+          <span id="date-month">NOVEMBRE</span>
+        </div>
+      </header>
+
+      <section class="page-view" id="page-accueil" data-view="accueil">
+        <div class="hero">
+          <p class="eyebrow">BIENVENUE SUR A DAY TO PLAY</p>
+          <h1>Et si on jouait<br>aujourd’hui ?</h1>
+          <p class="hero-subtitle">Play at your pace.</p>
+        </div>
+        <div class="section-heading">
+          <div><p class="eyebrow">À TOI DE CHOISIR</p><h2>Les défis du jour</h2></div>
+          <span class="section-meta">01 JEU DISPONIBLE</span>
+        </div>
+        <div class="games-grid">
+          <a class="game-card crossword-card" href="#crossword">
+            <span class="card-kicker">01 / POP CULTURE</span>
+            <span class="game-symbol crossword-symbol" aria-hidden="true">▦</span>
+            <h3>Pop Culture<br>Crossword</h3>
+            <p>Connais-tu vraiment tes classiques ?</p>
+            <span class="card-action">Découvrir le jeu <b>↗</b></span>
+          </a>
+          <article class="game-card coming-card">
+            <span class="card-kicker">02 / CULTURE GÉNÉRALE</span>
+            <span class="game-symbol" aria-hidden="true">◈</span>
+            <h3>Mythes ou<br>Mythos ?</h3>
+            <p>Vraies légendes ou histoires inventées ?</p>
+            <span class="coming-label">BIENTÔT DISPONIBLE</span>
+          </article>
+          <article class="game-card future-card">
+            <span class="game-symbol plus" aria-hidden="true">＋</span>
+            <h3>Un prochain jeu</h3>
+            <p>D’autres rendez-vous ludiques arriveront ici.</p>
+            <span class="coming-label">À VENIR</span>
+          </article>
+        </div>
+        <section class="streak-panel">
+          <div><p class="eyebrow">TON RENDEZ-VOUS QUOTIDIEN</p><h2>Ta série de jeu</h2><p class="muted">Joue à au moins un défi dans la journée pour entretenir ta série.</p></div>
+          <div class="streak-total"><strong id="streak-count">0</strong><span>jour(s)</span></div>
+          <div class="streak-days" id="streak-days" aria-label="Activité des sept derniers jours"></div>
+        </section>
+      </section>
+
+      <section class="page-view hidden" id="page-jeux" data-view="jeux">
+        <a class="back-link" href="#accueil">← Accueil</a>
+        <p class="eyebrow">TOUS LES JEUX</p><h1>Les jeux</h1>
+        <p class="page-lead">Choisis ton rendez-vous du jour.</p>
+        <div class="games-grid compact-grid">
+          <a class="game-card crossword-card" href="#crossword"><span class="card-kicker">01 / POP CULTURE</span><span class="game-symbol">▦</span><h3>Pop Culture<br>Crossword</h3><p>Trois niveaux, une grille à résoudre.</p><span class="card-action">Découvrir le jeu ↗</span></a>
+          <article class="game-card coming-card"><span class="card-kicker">02 / CULTURE GÉNÉRALE</span><span class="game-symbol">◈</span><h3>Mythes ou<br>Mythos ?</h3><p>Un jeu de vrai ou faux.</p><span class="coming-label">BIENTÔT DISPONIBLE</span></article>
+        </div>
+      </section>
+
+      <section class="page-view hidden" id="page-crossword" data-view="crossword">
+        <a class="back-link" href="#accueil">← Retour à l’accueil</a>
+        <p class="eyebrow">LE DÉFI DU JOUR</p>
+        <h1>Pop Culture Crossword</h1>
+        <p class="page-lead">Trois grilles, trois niveaux. Choisis ton défi : une fois la partie commencée, ton choix est définitif pour aujourd’hui.</p>
+        <div class="difficulty-grid">
+          <button class="difficulty-card easy" type="button" data-difficulty="facile">
+            <span class="difficulty-label">01 / FACILE</span><span class="difficulty-mark">01</span>
+            <h2>Culture pop</h2><p>Des thèmes larges pour entrer dans le jeu en douceur.</p><span class="difficulty-theme">Thème du jour : Musique</span><span class="difficulty-cta">Choisir cette grille ↗</span>
+          </button>
+          <button class="difficulty-card medium" type="button" data-difficulty="moyen">
+            <span class="difficulty-label">02 / MOYEN</span><span class="difficulty-mark">02</span>
+            <h2>Les incontournables</h2><p>Des œuvres cultes et des références à connaître.</p><span class="difficulty-theme">Thème du jour : Game of Thrones</span><span class="difficulty-cta">Choisir cette grille ↗</span>
+          </button>
+          <button class="difficulty-card hard" type="button" data-difficulty="difficile">
+            <span class="difficulty-label">03 / DIFFICILE</span><span class="difficulty-mark">03</span>
+            <h2>Pour les connaisseurs</h2><p>Des références précises qui mettent ta mémoire à l’épreuve.</p><span class="difficulty-theme">Thème du jour : Nana</span><span class="difficulty-cta">Choisir cette grille ↗</span>
+          </button>
+        </div>
+        <p class="demo-notice">Aperçu de l’interface : les thèmes affichés sont des exemples de démonstration, pas encore les défis publiés.</p>
+      </section>
+
+      <section class="page-view hidden" id="page-stats" data-view="stats">
+        <p class="eyebrow">TON PARCOURS</p><h1>Statistiques</h1><p class="page-lead">Tes statistiques personnelles apparaîtront ici lorsque le suivi des parties sera intégré.</p>
+        <div class="placeholder-panel"><span class="placeholder-symbol">▥</span><h2>Chaque partie compte</h2><p>Parties jouées, victoires, temps moyen et progression : tout sera regroupé dans cet espace.</p></div>
+      </section>
+
+      <section class="page-view hidden" id="page-apropos" data-view="apropos">
+        <p class="eyebrow">À PROPOS</p><h1>Le plaisir de jouer, chaque jour.</h1><p class="page-lead">A Day to Play réunit des jeux quotidiens autour de la culture, de la curiosité et du plaisir de se creuser les méninges.</p>
+        <div class="placeholder-panel"><span class="placeholder-symbol">✳</span><h2>Play at your pace.</h2><p>Un rendez-vous quotidien, sans classement ni pression.</p></div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
