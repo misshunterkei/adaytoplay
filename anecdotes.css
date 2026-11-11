@@ -1,12 +1,13 @@
-/* Bloc « Le saviez-vous ? » — styles autonomes pour ne pas dépendre des variables du thème existant. */
+/* Bloc « Le saviez-vous ? » — reprend les couleurs du thème A Day to Play. */
 .daily-anecdote {
+  display: block;
   margin: 2rem 0 2.5rem;
   padding: clamp(1.25rem, 2.5vw, 2rem);
-  border: 1px solid #e6e8ef;
+  border: 1px solid var(--border, #e5d9d1);
   border-radius: 18px;
-  background: linear-gradient(125deg, #ffffff 0%, #f7f8fc 100%);
-  color: #25283a;
-  box-shadow: 0 8px 28px rgba(30, 35, 60, 0.045);
+  background: var(--surface, #fffaf3);
+  color: var(--text, #34252d);
+  box-shadow: var(--shadow, 0 12px 35px rgba(52, 37, 45, .07));
 }
 .daily-anecdote-topline {
   display: flex;
@@ -18,45 +19,38 @@
 .daily-anecdote .eyebrow {
   display: flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: .55rem;
   margin: 0;
-  color: #666b83;
+  color: var(--muted, #81747a);
 }
-.anecdote-bulb { color: #a7833f; font-size: 1.15rem; }
+.anecdote-bulb { color: var(--ochre, #c58d32); font-size: 1.15rem; }
 .anecdote-tag {
-  padding: 0.35rem 0.65rem;
+  padding: .35rem .65rem;
   border-radius: 999px;
-  background: #f0eef9;
-  color: #655b91;
-  font-size: 0.65rem;
+  background: var(--active, #eee3df);
+  color: var(--wine, #681f3b);
+  font-size: .65rem;
   font-weight: 700;
-  letter-spacing: 0.09em;
+  letter-spacing: .09em;
   white-space: nowrap;
 }
 .daily-anecdote-date {
-  margin: 0 0 0.65rem;
-  color: #282b40;
+  margin: 0 0 .65rem;
+  color: var(--text, #34252d);
   font-size: clamp(1.25rem, 2vw, 1.65rem);
   font-weight: 700;
 }
 .daily-anecdote-text {
   max-width: 850px;
   margin: 0;
-  color: #555a70;
+  color: var(--muted, #81747a);
   font-size: 1rem;
   line-height: 1.7;
 }
-body.dark-theme .daily-anecdote {
-  border-color: #57414b;
-  background: linear-gradient(125deg, #382630 0%, #30232d 100%);
-  color: #f4ecdf;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
-}
-body.dark-theme .daily-anecdote .eyebrow { color: #c8b8b1; }
-body.dark-theme .anecdote-bulb { color: #d3ad65; }
-body.dark-theme .anecdote-tag { background: #51404a; color: #e7d1a6; }
-body.dark-theme .daily-anecdote-date { color: #f4ecdf; }
-body.dark-theme .daily-anecdote-text { color: #dfd0c9; }
-@media (max-width: 520px) {
+/* Garde les défis visibles sous le bloc, même si une ancienne règle CSS les masque. */
+#page-accueil:not(.hidden) > .section-heading { display: flex; }
+#page-accueil:not(.hidden) > .games-grid { display: grid; }
+#page-accueil:not(.hidden) > .streak-panel { display: grid; }
+@media (max-width: 680px) {
   .daily-anecdote-topline { align-items: flex-start; flex-direction: column; }
 }
