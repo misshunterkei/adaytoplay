@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="anecdotes.css">
+  <script src="anecdotes.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -46,6 +48,14 @@
           <h1>Et si on jouait<br>aujourd’hui ?</h1>
           <p class="hero-subtitle">Play at your pace.</p>
         </div>
+        <section class="daily-anecdote" aria-labelledby="anecdote-heading" aria-live="polite">
+          <div class="daily-anecdote-topline">
+            <p class="eyebrow" id="anecdote-heading"><span class="anecdote-bulb" aria-hidden="true">✳</span> LE SAVIEZ-VOUS ?</p>
+            <span class="anecdote-tag">L’ANECDOTE DU JOUR</span>
+          </div>
+          <h2 class="daily-anecdote-date" id="anecdote-date">Chargement…</h2>
+          <p class="daily-anecdote-text" id="anecdote-text">L’anecdote du jour arrive…</p>
+        </section>
         <div class="section-heading">
           <div><p class="eyebrow">À TOI DE CHOISIR</p><h2>Les défis du jour</h2></div>
           <span class="section-meta">01 JEU DISPONIBLE</span>
