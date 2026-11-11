@@ -1,0 +1,62 @@
+/* Bloc « Le saviez-vous ? » — styles autonomes pour ne pas dépendre des variables du thème existant. */
+.daily-anecdote {
+  margin: 2rem 0 2.5rem;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border: 1px solid #e6e8ef;
+  border-radius: 18px;
+  background: linear-gradient(125deg, #ffffff 0%, #f7f8fc 100%);
+  color: #25283a;
+  box-shadow: 0 8px 28px rgba(30, 35, 60, 0.045);
+}
+.daily-anecdote-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+.daily-anecdote .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  color: #666b83;
+}
+.anecdote-bulb { color: #a7833f; font-size: 1.15rem; }
+.anecdote-tag {
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: #f0eef9;
+  color: #655b91;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  white-space: nowrap;
+}
+.daily-anecdote-date {
+  margin: 0 0 0.65rem;
+  color: #282b40;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 700;
+}
+.daily-anecdote-text {
+  max-width: 850px;
+  margin: 0;
+  color: #555a70;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+body.dark-theme .daily-anecdote {
+  border-color: #57414b;
+  background: linear-gradient(125deg, #382630 0%, #30232d 100%);
+  color: #f4ecdf;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+body.dark-theme .daily-anecdote .eyebrow { color: #c8b8b1; }
+body.dark-theme .anecdote-bulb { color: #d3ad65; }
+body.dark-theme .anecdote-tag { background: #51404a; color: #e7d1a6; }
+body.dark-theme .daily-anecdote-date { color: #f4ecdf; }
+body.dark-theme .daily-anecdote-text { color: #dfd0c9; }
+@media (max-width: 520px) {
+  .daily-anecdote-topline { align-items: flex-start; flex-direction: column; }
+}
