@@ -65,7 +65,7 @@ function renderDailyAnecdote(date = new Date()) {
     return;
   }
 
-  dateElement.textContent = `${todayLabel} ${anecdote.year}`;
+  dateElement.textContent = anecdote.year ? `${todayLabel} ${anecdote.year}` : todayLabel;
   textElement.textContent = anecdote.text;
 }
 
