@@ -6,3 +6,80 @@ body.dark-theme{--bg:#2b1d26;--surface:#392832;--text:#f5ecdf;--muted:#c8b8bd;--
 @media(max-width:680px){.app-shell{display:block}.sidebar{width:100%;height:auto;min-height:68px;padding:9px 14px;flex-direction:row;justify-content:space-between;border-right:0;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:5}.brand{margin:0;flex-direction:row;gap:7px}.brand-name{display:flex;flex-direction:row;gap:2px;font-size:8px;line-height:1}.brand-name i{font-size:8px;padding:0 1px}.brand-mark{width:27px;height:27px}.main-nav{width:auto;flex-direction:row;gap:3px}.nav-link{width:40px;height:40px}.nav-icon{width:19px;height:19px}.theme-toggle{margin:0;width:40px;height:40px;padding:0}.main-content{padding:28px 18px 40px}.topbar{margin-bottom:48px;align-items:flex-start}.topbar-note p{font-size:11px;max-width:230px}.date-card{width:76px;min-height:85px}.date-card strong{font-size:30px}.date-card span{font-size:8px}.hero{margin-bottom:48px}.hero h1,h1{font-size:39px}.section-heading{align-items:flex-start;flex-direction:column;gap:8px}.section-heading h2{font-size:23px}.games-grid,.difficulty-grid,.compact-grid{grid-template-columns:1fr}.game-card,.game-card-inner,.game-card-face{min-height:260px}.future-card{display:none}.streak-panel{margin-top:45px;padding:22px;grid-template-columns:1fr auto}.streak-days{gap:4px}.streak-dot{width:19px;height:19px}.difficulty-card{min-height:260px}.difficulty-card h2{margin-top:30px}.page-lead{font-size:12px}.placeholder-panel{padding:25px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
 \n@media(hover:none){.game-card:active .game-card-inner{transform:rotateY(180deg)}}\n
+
+/* ACCUEIL — nouvel alignement du titre et de la date */
+.topbar {
+    align-items: flex-start;
+    margin-bottom: 34px;
+}
+
+.topbar .hero {
+    margin: 0;
+}
+
+.topbar .hero .eyebrow {
+    margin-bottom: 16px;
+}
+
+.topbar .hero h1 {
+    font-size: clamp(36px, 4.5vw, 58px);
+}
+
+.topbar .date-card {
+    margin-top: 0;
+}
+
+/* ANECDOTE — harmonie avec la palette A Day to Play */
+.daily-anecdote {
+    margin: 0 0 2.5rem;
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--shadow);
+}
+
+.daily-anecdote .eyebrow {
+    color: var(--muted);
+}
+
+.anecdote-bulb {
+    color: var(--ochre);
+}
+
+.anecdote-tag {
+    background: var(--active);
+    color: var(--wine);
+    border-radius: 6px;
+}
+
+.daily-anecdote-date {
+    color: var(--text);
+}
+
+.daily-anecdote-text {
+    color: var(--muted);
+}
+
+/* Adaptation mobile */
+@media (max-width: 680px) {
+    .topbar {
+        margin-bottom: 30px;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .topbar .hero h1 {
+        font-size: 36px;
+    }
+
+    .topbar .hero .eyebrow {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .daily-anecdote {
+        margin-bottom: 2rem;
+    }
+}
