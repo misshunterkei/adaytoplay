@@ -15,6 +15,35 @@ function updateDate() {
   $("#date-month").textContent = date.month.toLocaleUpperCase("fr-FR");
 }
 
+function getParisCalendarKey(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Paris", month: "2-digit", day: "2-digit"
+  }).formatToParts(date);
+  const values = Object.fromEntries(parts.map(part => [part.type, part.value]));
+  return `${values.month}-${values.day}`;
+}
+
+function renderDailyAnecdote(date = new Date()) {
+  const key = getParisCalendarKey(date);
+  const anecdote = window.ADP_ANECDOTES?.[key];
+  const dateElement = $("#anecdote-date");
+  const textElement = $("#anecdote-text");
+  if (!dateElement || !textElement) return;
+
+  const parts = parisDateParts(date);
+  const day = Number(parts.day);
+  const todayLabel = `${day === 1 ? "1er" : day} ${parts.month}`;
+
+  if (!anecdote) {
+    dateElement.textContent = todayLabel;
+    textElement.textContent = "L’anecdote de cette journée sera bientôt disponible.";
+    return;
+  }
+
+  dateElement.textContent = `${todayLabel} ${anecdote.year}`;
+  textElement.textContent = anecdote.text;
+}
+
 function applyTheme(theme) {
   document.body.classList.toggle("dark-theme", theme === "dark");
   $("#theme-icon").textContent = theme === "dark" ? "☀" : "☾";
@@ -97,5 +126,29 @@ let preferredTheme = "light";
 try { preferredTheme = localStorage.getItem("adp-theme") || "light"; } catch (_) {}
 applyTheme(preferredTheme);
 updateDate();
+renderDailyAnecdote();
 renderStreak();
 handleRoute();
+
+// Vérifie régulièrement la date de Paris pour actualiser l’anecdote à minuit,
+// même si la page reste ouverte dans un onglet.
+let lastParisDate = getParisISODate();
+window.setInterval(() => {
+  const currentParisDate = getParisISODate();
+  if (currentParisDate !== lastParisDate) {
+    lastParisDate = currentParisDate;
+    updateDate();
+    renderDailyAnecdote();
+    renderStreak();
+  }
+}, 60_000);
+
+window.addEventListener("focus", () => {
+  const currentParisDate = getParisISODate();
+  if (currentParisDate !== lastParisDate) {
+    lastParisDate = currentParisDate;
+    updateDate();
+    renderDailyAnecdote();
+    renderStreak();
+  }
+});
