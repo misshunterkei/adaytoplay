@@ -194,7 +194,7 @@ window.ADP_ANECDOTES = {
   "11-02": [
     {
       "year": 1983,
-      "text": "Michael Jackson sort le single Thriller et son vidéoclip, en plein jour des morts et deux jours après Halloween."
+      "text": "Michael Jackson sort le single Thriller. Le célèbre vidéoclip sera dévoilé le 2 décembre 1983."
     }
   ],
   "11-03": [
@@ -331,6 +331,230 @@ window.ADP_ANECDOTES = {
     {
       "year": 2001,
       "text": "Sortie au cinéma à Londres du premier film Harry Potter, Harry Potter à l’école des sorciers."
+    }
+  ],
+  "11-17": [
+    {
+      "year": 1558,
+      "text": "À la mort de Marie Ire, Élisabeth Ire accède au trône et devient reine d’Angleterre."
+    },
+    {
+      "year": 1869,
+      "text": "Inauguration du canal de Suez en Égypte, en présence de nombreuses personnalités européennes, dont l’impératrice Eugénie."
+    },
+    {
+      "year": 1975,
+      "text": "Le roman La Vie devant soi, publié sous le nom d’Émile Ajar, reçoit le prix Goncourt. On découvrira plus tard que son véritable auteur est Romain Gary, déjà lauréat en 1956."
+    },
+    {
+      "year": 1994,
+      "text": "Renault est introduit à la Bourse de Paris dans le cadre de la privatisation partielle du constructeur automobile."
+    }
+  ],
+  "11-18": [
+    {
+      "year": 1908,
+      "text": "À l’Assemblée nationale, Jean Jaurès prononce un discours contre la peine de mort."
+    },
+    {
+      "year": 2016,
+      "text": "La décision d’une juridiction britannique autorisant la cryogénisation du corps d’une adolescente est rendue publique."
+    }
+  ],
+  "11-19": [
+    {
+      "year": 1493,
+      "text": "Lors de son deuxième voyage, Christophe Colomb atteint l’île de Porto Rico."
+    },
+    {
+      "year": 1819,
+      "text": "Le musée du Prado ouvre ses portes au public à Madrid."
+    },
+    {
+      "year": 2006,
+      "text": "Nintendo lance sa console Wii en Amérique du Nord."
+    }
+  ],
+  "11-20": [
+    {
+      "year": 1910,
+      "text": "Début de la Révolution mexicaine, après l’appel à l’insurrection lancé par Francisco I. Madero."
+    },
+    {
+      "year": 1945,
+      "text": "Ouverture du procès de Nuremberg, au cours duquel sont jugés les principaux dirigeants nazis."
+    },
+    {
+      "year": 1947,
+      "text": "La princesse Élisabeth, future reine Élisabeth II, épouse Philip Mountbatten à l’abbaye de Westminster."
+    },
+    {
+      "year": 1984,
+      "text": "Le premier chapitre du manga Dragon Ball d’Akira Toriyama paraît dans le magazine Weekly Shōnen Jump."
+    },
+    {
+      "year": 1985,
+      "text": "Microsoft commercialise la première version de son système d’exploitation Windows, Windows 1.0."
+    }
+  ],
+  "11-21": [
+    {
+      "year": 1789,
+      "text": "La Caroline du Nord devient le 12e État à rejoindre les États-Unis."
+    },
+    {
+      "year": 2021,
+      "text": "L’épisode 1 000 de la série animée One Piece est diffusé au Japon."
+    },
+    {
+      "year": 1990,
+      "text": "Nintendo commercialise la Super Famicom au Japon, connue plus tard sous le nom de Super Nintendo sur les marchés occidentaux."
+    },
+    {
+      "year": 1694,
+      "text": "Naissance de l’écrivain et philosophe français Voltaire."
+    }
+  ],
+  "11-22": [
+    {
+      "year": 1883,
+      "text": "Ranavalona III est couronnée reine de Madagascar. Elle sera la dernière souveraine du royaume."
+    },
+    {
+      "year": 1963,
+      "text": "Le président américain John F. Kennedy est assassiné à Dallas, au Texas."
+    },
+    {
+      "year": 1977,
+      "text": "Air France inaugure la première liaison commerciale supersonique entre Paris et New York avec le Concorde."
+    },
+    {
+      "year": 1990,
+      "text": "Margaret Thatcher annonce sa démission du poste de Première ministre du Royaume-Uni."
+    }
+  ],
+  "11-23": [
+    {
+      "year": 1248,
+      "text": "Séville tombe aux mains des troupes de Ferdinand III de Castille, après plus d’un an de siège."
+    },
+    {
+      "year": null,
+      "text": "Au Japon, le 23 novembre est célébrée chaque année la fête du Travail et de la gratitude, Kinrō Kansha no Hi."
+    }
+  ],
+  "11-24": [
+    {
+      "year": 885,
+      "text": "Début du siège de Paris par les Vikings, qui assiègent la ville pendant plusieurs mois."
+    },
+    {
+      "year": 1642,
+      "text": "L’explorateur néerlandais Abel Tasman aperçoit l’île de Tasmanie, qu’il baptise terre de Van Diemen."
+    },
+    {
+      "year": 1922,
+      "text": "Le Parlement italien accorde à Benito Mussolini les pleins pouvoirs législatifs en matière économique et administrative."
+    },
+    {
+      "year": 1859,
+      "text": "Charles Darwin publie De l’origine des espèces, ouvrage majeur dans l’histoire de la théorie de l’évolution."
+    },
+    {
+      "year": 1974,
+      "text": "Le fossile de Lucy, un spécimen d’Australopithecus afarensis, est découvert à Hadar, en Éthiopie, par une équipe dirigée notamment par Donald Johanson, Maurice Taïeb et Yves Coppens."
+    }
+  ],
+  "11-25": [
+    {
+      "year": 1120,
+      "text": "La Blanche-Nef fait naufrage au large des côtes normandes. Parmi les victimes figure l’héritier du roi Henri Ier d’Angleterre."
+    },
+    {
+      "year": 1975,
+      "text": "Le Suriname devient indépendant des Pays-Bas."
+    },
+    {
+      "year": 1911,
+      "text": "Emiliano Zapata et ses partisans signent le Plan d’Ayala, manifeste politique et agraire du mouvement zapatista. Le texte sera proclamé le 28 novembre."
+    }
+  ],
+  "11-26": [
+    {
+      "year": 985,
+      "text": "Une donation datée du 26 novembre 985 marque traditionnellement la naissance de la ville de Montpellier."
+    },
+    {
+      "year": 1865,
+      "text": "La première édition d’Alice au pays des merveilles, de Lewis Carroll, est mise en vente au Royaume-Uni."
+    },
+    {
+      "year": 1977,
+      "text": "La première ligne du métro de Marseille est mise en service."
+    },
+    {
+      "year": 1974,
+      "text": "Simone Veil présente à l’Assemblée nationale son projet de loi visant à dépénaliser l’interruption volontaire de grossesse."
+    }
+  ],
+  "11-27": [
+    {
+      "year": 2002,
+      "text": "Le réseau canadien de veille sanitaire GPHIN repère des signalements faisant état d’une épidémie de pneumonie atypique en Chine, avant l’identification du SRAS."
+    }
+  ],
+  "11-28": [
+    {
+      "year": 1912,
+      "text": "L’Albanie proclame son indépendance vis-à-vis de l’Empire ottoman."
+    },
+    {
+      "year": 1960,
+      "text": "La Mauritanie accède à l’indépendance."
+    },
+    {
+      "year": 1966,
+      "text": "Le Burundi devient une république à la suite d’un coup d’État qui met fin à la monarchie."
+    },
+    {
+      "year": 1975,
+      "text": "Le Timor oriental proclame unilatéralement son indépendance du Portugal."
+    },
+    {
+      "year": 1911,
+      "text": "Emiliano Zapata et ses partisans proclament le Plan d’Ayala, manifeste politique et agraire qui marque une étape majeure de la Révolution mexicaine."
+    }
+  ],
+  "11-29": [
+    {
+      "year": 2009,
+      "text": "Le Rwanda devient le 54e membre du Commonwealth."
+    },
+    {
+      "year": 1922,
+      "text": "La tombe du pharaon Toutânkhamon, découverte quelques semaines plus tôt par Howard Carter, est officiellement ouverte en présence de visiteurs et de représentants de la presse."
+    }
+  ],
+  "11-30": [
+    {
+      "year": 1966,
+      "text": "La Barbade accède à l’indépendance du Royaume-Uni."
+    },
+    {
+      "year": 1967,
+      "text": "Le Yémen du Sud devient indépendant du Royaume-Uni."
+    },
+    {
+      "year": 1975,
+      "text": "L’ancien Dahomey adopte le nom de République populaire du Bénin."
+    },
+    {
+      "year": 1982,
+      "text": "Michael Jackson publie l’album Thriller aux États-Unis."
+    },
+    {
+      "year": 1872,
+      "text": "L’Écosse et l’Angleterre disputent à Glasgow le premier match international officiel de football."
     }
   ]
 };
