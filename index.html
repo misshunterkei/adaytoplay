@@ -30,17 +30,33 @@
     </aside>
 
     <main class="main-content">
-      <header class="topbar">
-        <div class="topbar-note">
-          <span class="eyebrow">LE RENDEZ-VOUS DU JOUR</span>
-          <p id="daily-note">Une nouvelle grille, trois niveaux, à toi de jouer.</p>
-        </div>
-        <div class="date-card" aria-label="Date du jour">
-          <span id="date-weekday">MARDI</span>
-          <strong id="date-day">10</strong>
-          <span id="date-month">NOVEMBRE</span>
-        </div>
-      </header>
+      
+<header class="topbar">
+  <div class="hero">
+    <p class="eyebrow">BIENVENUE SUR A DAY TO PLAY</p>
+    <h1>Et si on jouait<br>aujourd’hui ?</h1>
+    <p class="hero-subtitle">Play at your pace.</p>
+  </div>
+
+  <div class="date-card" aria-label="Date du jour">
+    <span id="date-weekday">MARDI</span>
+    <strong id="date-day">10</strong>
+    <span id="date-month">NOVEMBRE</span>
+  </div>
+</header>
+
+<section class="page-view" id="page-accueil" data-view="accueil">
+  <section class="daily-anecdote" aria-labelledby="anecdote-heading" aria-live="polite">
+    <div class="daily-anecdote-topline">
+      <p class="eyebrow" id="anecdote-heading">
+        <span class="anecdote-bulb" aria-hidden="true">✳</span>
+        LE SAVIEZ-VOUS ?
+      </p>
+      <span class="anecdote-tag">L’ANECDOTE DU JOUR</span>
+    </div>
+    <h2 class="daily-anecdote-date" id="anecdote-date">Chargement…</h2>
+    <p class="daily-anecdote-text" id="anecdote-text">L’anecdote du jour arrive…</p>
+  </section>
 
       <section class="page-view" id="page-accueil" data-view="accueil">
         <div class="hero">
