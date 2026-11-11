@@ -37,7 +37,11 @@ window.ADP_ANECDOTES = {
   },
   "01-10": {
     "year": 9,
-    "text": "Wang Mang devient empereur de Chine et fonde la dynastie Xin."
+    "text": "Wang Mang devient empereur de Chine et fonde la dynastie Xin."},
+  
+  "01-11": {
+    "year": 1697,
+    "text": "parution du conte Le Petit Chaperon rouge de Charles Perrault."
   },
   "01-12": {
     "year": 1926,
