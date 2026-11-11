@@ -23,9 +23,34 @@ function getParisCalendarKey(date = new Date()) {
   return `${values.month}-${values.day}`;
 }
 
-function renderDailyAnecdote(date = new Date()) {
+function getParisISODate(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Paris", year: "numeric", month: "2-digit", day: "2-digit"
+  }).formatToParts(date);
+  const values = Object.fromEntries(parts.map(part => [part.type, part.value]));
+  return `${values.year}-${values.month}-${values.day}`;
+}
+
+// Sélection déterministe : une même date donne la même anecdote à tous les joueurs,
+// même après actualisation. Le tirage peut être différent l'année suivante.
+function getDailyAnecdoteForDate(anecdotes, date = new Date()) {
   const key = getParisCalendarKey(date);
-  const anecdote = window.ADP_ANECDOTES?.[key];
+  const candidates = anecdotes?.[key];
+  if (!Array.isArray(candidates) || candidates.length === 0) return null;
+  if (candidates.length === 1) return candidates[0];
+
+  const dateSeed = getParisISODate(date);
+  let hash = 2166136261;
+  for (let i = 0; i < dateSeed.length; i++) {
+    hash ^= dateSeed.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  const index = (hash >>> 0) % candidates.length;
+  return candidates[index];
+}
+
+function renderDailyAnecdote(date = new Date()) {
+  const anecdote = getDailyAnecdoteForDate(window.ADP_ANECDOTES, date);
   const dateElement = $("#anecdote-date");
   const textElement = $("#anecdote-text");
   if (!dateElement || !textElement) return;
@@ -70,14 +95,6 @@ function handleRoute() {
   const route = location.hash.replace("#", "") || "accueil";
   const allowed = ["accueil", "jeux", "stats", "apropos", "crossword"];
   navigate(allowed.includes(route) ? route : "accueil");
-}
-
-function getParisISODate() {
-  const parts = new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Europe/Paris", year: "numeric", month: "2-digit", day: "2-digit"
-  }).formatToParts(new Date());
-  const values = Object.fromEntries(parts.map(part => [part.type, part.value]));
-  return `${values.year}-${values.month}-${values.day}`;
 }
 
 function previousDate(dateString, offset) {
