@@ -557,4 +557,167 @@ window.ADP_ANECDOTES = {
       "text": "L’Écosse et l’Angleterre disputent à Glasgow le premier match international officiel de football."
     }
   ]
+}
+{
+  "12-01": [
+    { "year": 1913, "text": "La Crète est officiellement rattachée à la Grèce, après avoir proclamé son union avec le royaume." },
+    { "year": 1958, "text": "La République centrafricaine est proclamée. Elle devient pleinement indépendante de la France le 13 août 1960." },
+    { "year": 1953, "text": "Le premier numéro du magazine Playboy paraît aux États-Unis. Marilyn Monroe y apparaît en couverture et dans le célèbre dépliant central, devenant la première playmate du magazine." }
+  ],
+  "12-02": [
+    { "year": 1615, "text": "Louis XIII épouse Anne d’Autriche à Bordeaux, scellant une alliance dynastique entre la France et l’Espagne." },
+    { "year": 1908, "text": "Puyi, âgé de deux ans, est intronisé empereur de Chine. Il sera le dernier empereur de la dynastie Qing." },
+    { "year": 1971, "text": "Les Émirats arabes unis proclament leur indépendance du Royaume-Uni et se fédèrent." },
+    { "year": 1975, "text": "Au Laos, le Pathet Lao abolit la monarchie et proclame la République démocratique populaire lao." },
+    { "year": 2009, "text": "La construction du Burj Khalifa, à Dubaï, est officiellement achevée. La tour sera inaugurée le 4 janvier 2010." }
+  ],
+  "12-03": [
+    { "year": 1810, "text": "Les Britanniques prennent l’île Maurice aux Français, après la campagne des Mascareignes." },
+    { "year": 1818, "text": "L’Illinois devient le 21e État des États-Unis." },
+    { "year": 2024, "text": "En Corée du Sud, le président Yoon Suk-yeol proclame la loi martiale. L’Assemblée nationale vote sa levée quelques heures plus tard, contraignant le président à y mettre fin." }
+  ],
+  "12-04": [
+    { "year": 1642, "text": "Le cardinal de Richelieu meurt à Paris, à l’âge de 57 ans." },
+    { "year": 1872, "text": "Le navire marchand Mary Celeste est découvert abandonné dans l’Atlantique, près des Açores. Son équipage a disparu sans laisser de trace." },
+    { "year": 1977, "text": "Jean-Bedel Bokassa se fait couronner empereur de Centrafrique sous le nom de Bokassa Ier." },
+    { "year": 1980, "text": "Led Zeppelin annonce officiellement sa dissolution, après la mort de son batteur John Bonham." }
+  ],
+  "12-05": [
+    { "year": 1560, "text": "Le roi François II meurt à Orléans, après seulement dix-sept mois de règne. Son frère Charles IX lui succède." },
+    { "year": 1945, "text": "Cinq bombardiers américains du vol 19 disparaissent au-dessus de l’Atlantique, au large de la Floride, lors d’un exercice de la marine américaine." },
+    { "year": 2001, "text": "Le film Ocean’s Eleven, réalisé par Steven Soderbergh, est présenté en avant-première à Hollywood." }
+  ],
+  "12-06": [
+    { "year": 1240, "text": "Les troupes mongoles de Batu Khan prennent Kiev après un siège dévastateur, lors de leur invasion de la Rus’ de Kiev." },
+    { "year": 1917, "text": "La Finlande proclame son indépendance de la Russie, alors plongée dans la révolution." }
+  ],
+  "12-07": [
+    { "year": 1972, "text": "L’équipage d’Apollo 17 photographie la Terre dans son intégralité éclairée depuis l’espace. Connue sous le nom de « Bille bleue », l’image devient l’une des photographies les plus diffusées au monde." },
+    { "year": 1990, "text": "Edward aux mains d’argent, film fantastique de Tim Burton avec Johnny Depp, sort dans les salles américaines." }
+  ],
+  "12-08": [
+    { "year": 1944, "text": "En France, les Compagnies républicaines de sécurité (CRS) sont officiellement créées." },
+    { "year": 1963, "text": "Le vol Pan Am 214 s’écrase dans le Maryland après avoir été frappé par la foudre. Les 81 personnes à bord périssent." }
+  ],
+  "12-09": [
+    { "year": 1905, "text": "En France, la loi concernant la séparation des Églises et de l’État est promulguée. Elle établit le principe de laïcité et garantit la liberté de conscience." },
+    { "year": 1987, "text": "La première Intifada débute dans les territoires palestiniens occupés par Israël, après un accident de la route meurtrier impliquant un véhicule militaire israélien à Gaza." }
+  ],
+  "12-10": [
+    { "year": 1948, "text": "L’Assemblée générale des Nations unies adopte à Paris la Déclaration universelle des droits de l’homme." },
+    { "year": 1964, "text": "Le pasteur et militant américain Martin Luther King reçoit le prix Nobel de la paix pour son engagement non violent contre la ségrégation raciale." },
+    { "year": 1968, "text": "Au Japon, un commando dérobe 300 millions de yens lors du spectaculaire braquage dit du « casse des 300 millions de yens »." },
+    { "year": 1999, "text": "La fusée Ariane 5 effectue son premier vol commercial réussi, mettant en orbite deux satellites." }
+  ],
+  "12-11": [
+    { "year": 220, "text": "L’empereur Han Xiandi abdique sous la pression de Cao Pi, qui fonde la dynastie Wei et met fin à la dynastie Han." },
+    { "year": 1946, "text": "L’Assemblée générale des Nations unies crée l’UNICEF, afin de venir en aide aux enfants touchés par la Seconde Guerre mondiale." }
+  ],
+  "12-12": [
+    { "year": 1913, "text": "La Joconde, volée au musée du Louvre en août 1911 par Vincenzo Peruggia, est retrouvée à Florence, en Italie." },
+    { "year": 1963, "text": "Le Kenya accède à l’indépendance du Royaume-Uni. Jomo Kenyatta devient son Premier ministre." }
+  ],
+  "12-13": [
+    { "year": 1474, "text": "À la mort de son demi-frère Henri IV, Isabelle devient reine de Castille." },
+    { "year": 1642, "text": "L’explorateur néerlandais Abel Tasman aperçoit la Nouvelle-Zélande, devenant le premier Européen connu à atteindre ces îles." },
+    { "year": 1920, "text": "À Bonn, en Allemagne, Hans Riegel fonde l’entreprise de confiserie Haribo." },
+    { "year": 1974, "text": "Malte devient une république, mettant fin à la monarchie constitutionnelle dont la reine Élisabeth II était le chef d’État." },
+    { "year": 2024, "text": "En France, François Bayrou est nommé Premier ministre par Emmanuel Macron, succédant à Michel Barnier." }
+  ],
+  "12-14": [
+    { "year": 1503, "text": "Naissance de Nostradamus, médecin et astrologue français, à Saint-Rémy-de-Provence." },
+    { "year": 1542, "text": "À seulement six jours, Marie Stuart devient reine d’Écosse à la mort de son père, Jacques V." },
+    { "year": 2008, "text": "Lors d’une conférence de presse à Bagdad, le journaliste irakien Mountazer al-Zaïdi lance ses chaussures en direction du président américain George W. Bush, geste de protestation particulièrement insultant dans la culture arabe." }
+  ],
+  "12-15": [
+    { "year": 37, "text": "Naissance de Néron, futur empereur romain." },
+    { "year": 1979, "text": "Le jeu de société Trivial Pursuit est imaginé et créé à Montréal par les Canadiens Chris Haney et Scott Abbott." },
+    { "year": 1996, "text": "Boeing et McDonnell Douglas annoncent leur fusion, donnant naissance au premier groupe mondial de l’aéronautique et de la défense." },
+    { "year": 2005, "text": "L’Irak organise ses premières élections législatives pluralistes depuis la chute de Saddam Hussein." }
+  ],
+  "12-16": [
+    { "year": 1431, "text": "Henri VI d’Angleterre est couronné roi de France en la cathédrale Notre-Dame de Paris, dans le contexte de la guerre de Cent Ans." },
+    { "year": 1946, "text": "Christian Dior fonde sa maison de couture au 30, avenue Montaigne, à Paris. Sa première collection sera présentée en février 1947." },
+    { "year": 1977, "text": "La Fièvre du samedi soir (Saturday Night Fever), avec John Travolta, est présentée en avant-première à New York." },
+    { "year": 1992, "text": "Un commando dérobe 146 millions de francs dans les coffres de la Banque de France à Toulon. Préparé avec la complicité d’une employée et la prise en otage d’un agent de sécurité, ce braquage spectaculaire restera célèbre sous le nom de « casse du siècle »." }
+  ],
+  "12-17": [
+    { "year": 1718, "text": "La Grande-Bretagne déclare la guerre à l’Espagne, dans le cadre de la guerre de la Quadruple-Alliance." },
+    { "year": 1819, "text": "Le Congrès d’Angostura proclame la création de la Grande Colombie, fédération sud-américaine portée par Simón Bolívar." },
+    { "year": 1946, "text": "Paul Douchy présente le premier bulletin météorologique télévisé en France." },
+    { "year": 1989, "text": "La série animée Les Simpson est diffusée pour la première fois dans son format de série sur la chaîne américaine Fox." },
+    { "year": 2010, "text": "En Tunisie, Mohamed Bouazizi s’immole par le feu à Sidi Bouzid pour protester contre les humiliations et les abus dont il est victime. Sa mort, le 4 janvier 2011, contribue au déclenchement de la révolution tunisienne puis du Printemps arabe." }
+  ],
+  "12-18": [
+    { "year": 1944, "text": "À Paris, paraît le premier numéro du journal Le Monde, daté du 19 décembre." },
+    { "year": 1970, "text": "Le consortium Airbus est officiellement créé, réunissant des entreprises aéronautiques françaises, allemandes et espagnoles." },
+    { "year": 1994, "text": "La grotte Chauvet, qui abrite des peintures et gravures préhistoriques exceptionnelles, est découverte en Ardèche par trois spéléologues." }
+  ],
+  "12-19": [
+    { "year": 1971, "text": "Orange mécanique, film de Stanley Kubrick, sort aux États-Unis et suscite de vives polémiques en raison de sa violence et de ses thèmes." },
+    { "year": 2001, "text": "Le film Le Seigneur des anneaux : La Communauté de l’anneau, réalisé par Peter Jackson, sort dans les salles." },
+    { "year": null, "text": "Au Chili, le 19 décembre est consacré à la Journée nationale contre le féminicide." }
+  ],
+  "12-20": [
+    { "year": 1860, "text": "La Caroline du Sud fait sécession des États-Unis, devenant le premier État à quitter l’Union avant la guerre de Sécession." },
+    { "year": 1924, "text": "Adolf Hitler est libéré de la prison de Landsberg, où il était détenu après sa tentative de putsch de Munich." },
+    { "year": 1951, "text": "Aux États-Unis, le réacteur expérimental EBR-I produit pour la première fois de l’électricité à partir de l’énergie nucléaire." },
+    { "year": 1975, "text": "TF1 commence à émettre en couleur. Pour marquer l’événement, un feu d’artifice est tiré depuis la tour Eiffel." }
+  ],
+  "12-21": [
+    { "year": 1192, "text": "Richard Cœur de Lion, roi d’Angleterre, est capturé en Autriche par des hommes du duc Léopold V, alors qu’il rentre de la troisième croisade." },
+    { "year": 1826, "text": "Des colons américains proclament la République de Fredonia au Texas, une tentative de sécession qui ne durera que quelques semaines." },
+    { "year": 1937, "text": "Blanche-Neige et les Sept Nains, premier long métrage d’animation des studios Disney, est présenté en avant-première à Hollywood." },
+    { "year": 1971, "text": "Médecins sans frontières est fondée à Paris par un groupe de médecins et de journalistes français, parmi lesquels Bernard Kouchner." }
+  ],
+  "12-22": [
+    { "year": 69, "text": "Vespasien est reconnu empereur par le Sénat romain, mettant fin à la guerre civile de l’année des quatre empereurs." },
+    { "year": 1639, "text": "Naissance de Jean Racine, futur dramaturge français, à La Ferté-Milon." },
+    { "year": 1894, "text": "Le capitaine Alfred Dreyfus est condamné à la déportation à vie pour trahison, à l’issue de son premier procès." }
+  ],
+  "12-23": [
+    { "year": 1865, "text": "La France, la Belgique, l’Italie et la Suisse signent la convention fondant l’Union monétaire latine, destinée à harmoniser leurs monnaies." },
+    { "year": 1986, "text": "L’avion expérimental Rutan Voyager achève le premier tour du monde sans escale et sans ravitaillement, après neuf jours de vol." }
+  ],
+  "12-24": [
+    { "year": 1924, "text": "En Albanie, Ahmet Zogu prend le pouvoir à la suite d’un coup d’État, renversant le gouvernement de Fan Noli. Il deviendra président en 1925." },
+    { "year": 1994, "text": "En Algérie, un commando du Groupe islamique armé (GIA) détourne le vol Air France 8969 reliant Alger à Paris et prend ses passagers en otage." }
+  ],
+  "12-25": [
+    { "year": 800, "text": "À Rome, le pape Léon III couronne Charlemagne empereur, événement fondateur de l’Empire carolingien." },
+    { "year": 1599, "text": "La ville de Natal, dans le nord-est du Brésil, est fondée par les Portugais." },
+    { "year": 1758, "text": "La comète de Halley réapparaît comme l’avait prédit l’astronome Edmond Halley, confirmant pour la première fois la périodicité des comètes." }
+  ],
+  "12-26": [
+    { "year": 1973, "text": "L’Exorciste, film d’horreur de William Friedkin, sort dans les salles américaines et provoque de fortes réactions chez certains spectateurs." },
+    { "year": 1991, "text": "À Moscou, le Soviet suprême constate la disparition de l’Union soviétique et adopte la déclaration qui met formellement fin à l’URSS." },
+    { "year": 2004, "text": "Un séisme sous-marin au large de Sumatra déclenche un tsunami dans l’océan Indien, dévastant les côtes de plusieurs pays et faisant plus de 220 000 victimes." }
+  ],
+  "12-27": [
+    { "year": 1958, "text": "Le général de Gaulle annonce une réforme monétaire qui crée le nouveau franc, équivalant à 100 anciens francs. Il entre en circulation le 1er janvier 1960." },
+    { "year": 1984, "text": "La météorite ALH 84001, d’origine martienne, est découverte dans l’Antarctique. Elle fera l’objet de débats scientifiques sur d’éventuelles traces de vie ancienne." }
+  ],
+  "12-28": [
+    { "year": 1612, "text": "Galilée observe Neptune sans reconnaître qu’il s’agit d’une planète et la prend pour une étoile." },
+    { "year": 1981, "text": "Aux États-Unis, Elizabeth Jordan Carr, premier bébé américain conçu par fécondation in vitro, naît en Virginie." },
+    { "year": 2011, "text": "Les funérailles nationales de Kim Jong-il, dirigeant de la Corée du Nord, ont lieu à Pyongyang." },
+    { "year": 2017, "text": "George Weah, ancien footballeur international, remporte l’élection présidentielle au Liberia." }
+  ],
+  "12-29": [
+    { "year": 1920, "text": "À Tours, le congrès de la SFIO vote l’adhésion à l’Internationale communiste, acte fondateur du Parti communiste français." },
+    { "year": 1987, "text": "Le cosmonaute soviétique Iouri Romanenko revient sur Terre après 326 jours, 11 heures et 38 minutes dans l’espace, établissant alors un record de durée pour une mission spatiale." }
+  ],
+  "12-30": [
+    { "year": 1911, "text": "Sun Yat-sen est élu président provisoire de la République de Chine. Il prendra officiellement ses fonctions le 1er janvier 1912." },
+    { "year": 1911, "text": "En France, le chèque barré est institué pour renforcer la sécurité des paiements." },
+    { "year": 1975, "text": "Madagascar est proclamée République démocratique, sous la présidence de Didier Ratsiraka." },
+    { "year": 1979, "text": "Saddam Hussein devient président de la République d’Irak, après la démission d’Ahmed Hassan al-Bakr." }
+  ],
+  "12-31": [
+    { "year": 1810, "text": "Les Britanniques prennent possession de la Guadeloupe, qui était alors sous contrôle français." },
+    { "year": 1857, "text": "La reine Victoria choisit Ottawa comme capitale de la province du Canada-Uni." },
+    { "year": 1909, "text": "Le pont de Manhattan, à New York, est ouvert à la circulation, reliant Brooklyn à Manhattan." },
+    { "year": 1973, "text": "Le groupe de hard rock AC/DC donne son premier concert au Chequers Nightclub de Sydney, en Australie." },
+    { "year": 1984, "text": "Le retrait des États-Unis de l’UNESCO devient effectif, après l’annonce de leur décision en 1983." }
+  ]
 };
