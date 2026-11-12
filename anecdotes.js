@@ -556,8 +556,7 @@ window.ADP_ANECDOTES = {
       "year": 1872,
       "text": "L’Écosse et l’Angleterre disputent à Glasgow le premier match international officiel de football."
     }
-  ]
-}
+  ],
 {
   "12-01": [
     { "year": 1913, "text": "La Crète est officiellement rattachée à la Grèce, après avoir proclamé son union avec le royaume." },
