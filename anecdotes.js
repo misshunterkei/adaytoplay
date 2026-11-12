@@ -557,7 +557,6 @@ window.ADP_ANECDOTES = {
       "text": "L’Écosse et l’Angleterre disputent à Glasgow le premier match international officiel de football."
     }
   ],
-{
   "12-01": [
     { "year": 1913, "text": "La Crète est officiellement rattachée à la Grèce, après avoir proclamé son union avec le royaume." },
     { "year": 1958, "text": "La République centrafricaine est proclamée. Elle devient pleinement indépendante de la France le 13 août 1960." },
