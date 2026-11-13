@@ -133,12 +133,133 @@ $("#theme-toggle").addEventListener("click", () => {
 
 window.addEventListener("hashchange", handleRoute);
 
-$$("[data-difficulty]").forEach(button => {
+let activeCrossword = null;
+let crosswordLives = 3;
+
+function renderCrossword() {
+  const board = $("#crossword-board");
+  const across = $("#clues-across");
+  const down = $("#clues-down");
+  if (!activeCrossword || !board || !across || !down) return;
+
+  const starts = new Map();
+  activeCrossword.words.forEach(word => starts.set(word.row + "," + word.col, word.number));
+  board.innerHTML = "";
+  board.style.gridTemplateColumns = `repeat(${activeCrossword.size}, minmax(0, 1fr))`;
+
+  activeCrossword.cells.forEach((row, r) => row.forEach((cell, c) => {
+    const square = document.createElement("div");
+    square.className = "crossword-cell" + (cell ? " is-letter" : " is-block");
+    if (cell) {
+      const number = starts.get(r + "," + c);
+      if (number) {
+        const label = document.createElement("span");
+        label.className = "crossword-number";
+        label.textContent = number;
+        square.appendChild(label);
+      }
+      const input = document.createElement("input");
+      input.maxLength = 1;
+      input.autocomplete = "off";
+      input.autocapitalize = "characters";
+      input.dataset.row = r;
+      input.dataset.col = c;
+      input.setAttribute("aria-label", `Ligne ${r + 1}, colonne ${c + 1}`);
+      input.addEventListener("input", () => {
+        input.value = window.ADP_CROSSWORD_GENERATOR.normalize(input.value).slice(-1);
+        input.classList.remove("is-wrong");
+        if (input.value) {
+          const next = board.querySelector(`input[data-row="${r}"][data-col="${c + 1}"]`);
+          if (next) next.focus();
+        }
+      });
+      input.addEventListener("keydown", event => {
+        if (event.key === "Backspace" && !input.value) {
+          const previous = board.querySelector(`input[data-row="${r}"][data-col="${c - 1}"]`);
+          if (previous) previous.focus();
+        }
+      });
+      square.appendChild(input);
+    }
+    board.appendChild(square);
+  }));
+
+  const addClues = (words, target) => {
+    target.innerHTML = "";
+    words.filter(word => word.dir === (target === across ? "across" : "down"))
+      .forEach(word => {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${word.number}.</strong> ${word.clue}`;
+        target.appendChild(li);
+      });
+  };
+  addClues(activeCrossword.words, across);
+  addClues(activeCrossword.words, down);
+  $("#crossword-lives").textContent = crosswordLives;
+  $("#crossword-feedback").textContent = "";
+}
+
+function startCrossword() {
+  try {
+    activeCrossword = window.ADP_CROSSWORD_GENERATOR.buildGrid(window.ADP_GAME_OF_THRONES_CHARACTERS);
+    crosswordLives = 3;
+    renderCrossword();
+    $(".difficulty-grid").classList.add("hidden");
+    $(".demo-notice").classList.add("hidden");
+    $("#crossword-game").classList.remove("hidden");
+    $("#crossword-game").scrollIntoView({ behavior: "smooth", block: "start" });
+  } catch (error) {
+    $("#crossword-feedback").textContent = error.message;
+    $("#crossword-game").classList.remove("hidden");
+  }
+}
+
+$("[data-difficulty]").forEach(button => {
   button.addEventListener("click", () => {
-    const difficulty = button.dataset.difficulty;
-    // Le choix de difficulté sera verrouillé ici lorsque le moteur de partie sera branché.
-    alert(`La grille « ${difficulty} » sera prochainement disponible. Cette étape sert actuellement à valider la navigation.`);
+    if (button.dataset.difficulty === "moyen") startCrossword();
+    else alert("Cette grille sera disponible dans une prochaine étape. Pour le moment, seul le thème Game of Thrones est en test.");
   });
+});
+
+$("#crossword-back").addEventListener("click", () => {
+  $("#crossword-game").classList.add("hidden");
+  $(".difficulty-grid").classList.remove("hidden");
+  $(".demo-notice").classList.remove("hidden");
+});
+
+$("#crossword-check").addEventListener("click", () => {
+  if (!activeCrossword) return;
+  let errors = 0;
+  let filled = 0;
+  activeCrossword.words.forEach(word => {
+    for (let i = 0; i < word.answer.length; i++) {
+      const row = word.row + (word.dir === "down" ? i : 0);
+      const col = word.col + (word.dir === "across" ? i : 0);
+      const input = $(`#crossword-board input[data-row="${row}"][data-col="${col}"]`);
+      if (!input.value) errors++;
+      else {
+        filled++;
+        if (input.value !== word.answer[i]) {
+          errors++;
+          input.classList.add("is-wrong");
+        } else input.classList.remove("is-wrong");
+      }
+    }
+  });
+  if (errors === 0) {
+    $("#crossword-feedback").textContent = "Bravo ! Toutes les réponses sont correctes.";
+    $("#crossword-feedback").classList.add("is-success");
+    return;
+  }
+  crosswordLives--;
+  $("#crossword-lives").textContent = crosswordLives;
+  $("#crossword-feedback").classList.remove("is-success");
+  if (crosswordLives <= 0) {
+    $("#crossword-feedback").textContent = "Partie terminée. La solution sera révélée dans une prochaine version.";
+    $("#crossword-check").disabled = true;
+  } else {
+    $("#crossword-feedback").textContent = `${errors} case(s) à corriger. Il te reste ${crosswordLives} vérification(s).`;
+  }
 });
 
 let preferredTheme = "light";
