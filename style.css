@@ -26,3 +26,35 @@ body.dark-theme{--bg:#2b1d26;--surface:#392832;--text:#f5ecdf;--muted:#c8b8bd;--
   .theme-toggle .theme-icon{width:21px;height:21px}
   .brand-name{text-transform:uppercase}
 }
+
+
+/* Pop Culture Crossword — première interface jouable */
+.crossword-game{margin-top:42px;padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow)}
+.crossword-game-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:25px}
+.crossword-game-heading h2{font:700 28px Urbanist,sans-serif;margin:0 0 8px}
+.crossword-instructions{font-size:12px;line-height:1.6;color:var(--muted);margin:0;max-width:580px}
+.crossword-back{border:1px solid var(--border);background:transparent;color:var(--text);border-radius:7px;padding:10px 13px;font-size:11px;cursor:pointer;white-space:nowrap}
+.crossword-layout{display:grid;grid-template-columns:minmax(280px,1.05fr) minmax(280px,.95fr);gap:30px;align-items:start}
+.crossword-board-wrap{width:100%;max-width:620px;overflow:auto}
+.crossword-board{display:grid;gap:2px;width:100%;aspect-ratio:1;background:var(--text);border:2px solid var(--text)}
+.crossword-cell{position:relative;min-width:0;min-height:0;aspect-ratio:1}
+.crossword-cell.is-block{background:var(--text)}
+.crossword-cell.is-letter{background:var(--surface)}
+.crossword-cell input{width:100%;height:100%;border:0;border-radius:0;padding:0;text-align:center;text-transform:uppercase;background:transparent;color:var(--text);font:700 clamp(9px,1.7vw,17px) Urbanist,sans-serif;outline:none}
+.crossword-cell input:focus{background:var(--active);box-shadow:inset 0 0 0 2px var(--blue)}
+.crossword-cell input.is-wrong{background:#f5d9d9;color:#8c2525}
+.crossword-number{position:absolute;top:1px;left:2px;font:600 clamp(5px,.65vw,8px) Urbanist,sans-serif;color:var(--muted);pointer-events:none;z-index:1}
+.crossword-clues{min-width:0}
+.crossword-lives{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:var(--bg);border:1px solid var(--border);border-radius:7px;font-size:11px;margin-bottom:20px}
+.crossword-lives strong{font:800 20px Urbanist,sans-serif}
+.clue-columns{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.clue-columns h3{font:700 14px Urbanist,sans-serif;margin:0 0 12px}
+.clue-columns ol{padding-left:22px;margin:0}
+.clue-columns li{font-size:11px;line-height:1.5;padding:0 0 10px 3px;color:var(--muted)}
+.clue-columns li strong{color:var(--text)}
+.crossword-check{margin-top:22px;padding:12px 17px;background:var(--wine);color:var(--ivory);border:0;border-radius:7px;font:700 11px Urbanist,sans-serif;cursor:pointer}
+.crossword-check:disabled{opacity:.5;cursor:not-allowed}
+.crossword-feedback{min-height:20px;font-size:11px;line-height:1.5;color:#a33c3c;margin:12px 0 0}
+.crossword-feedback.is-success{color:var(--green)}
+@media(max-width:850px){.crossword-layout{grid-template-columns:1fr}.crossword-board-wrap{max-width:540px;margin:auto}.crossword-clues{margin-top:4px}}
+@media(max-width:600px){.crossword-game{padding:16px;margin-top:28px}.crossword-game-heading{flex-direction:column}.crossword-game-heading h2{font-size:24px}.crossword-layout{gap:22px}.crossword-board{gap:1px}.clue-columns{gap:12px}.crossword-cell input{font-size:11px}}
