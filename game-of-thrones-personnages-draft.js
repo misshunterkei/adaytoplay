@@ -18,7 +18,7 @@
  * Les réponses seront normalisées au moment de la génération de grille.
  */
 
-export const gameOfThronesCharacters = [
+window.ADP_GAME_OF_THRONES_CHARACTERS = [
   {
     "id": "STK-001",
     "name": "Rickard Stark",
@@ -2000,4 +2000,3 @@ export const gameOfThronesCharacters = [
   }
 ];
 
-export default gameOfThronesCharacters;
