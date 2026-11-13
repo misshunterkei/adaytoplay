@@ -1,4 +1,3 @@
-```javascript
 /**
  * A DAY TO PLAY — POP CULTURE CROSSWORD
  * Premier draft de la banque de personnages Game of Thrones (série HBO uniquement).
