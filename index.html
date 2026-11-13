@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="anecdotes.css">
   <script src="anecdotes.js" defer></script>
+  <script src="game-of-thrones-personnages-draft.js" defer></script>
+  <script src="crossword-generator.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -137,6 +139,24 @@
           </button>
         </div>
         <p class="demo-notice">Aperçu de l’interface : les thèmes affichés sont des exemples de démonstration, pas encore les défis publiés.</p>
+        <section id="crossword-game" class="crossword-game hidden" aria-live="polite">
+          <div class="crossword-game-heading">
+            <div><p class="eyebrow">GRILLE DE DÉMONSTRATION</p><h2>Game of Thrones</h2><p class="crossword-instructions">Complète les cases en t’aidant des définitions. Les espaces et accents ne sont pas utilisés dans la grille.</p></div>
+            <button id="crossword-back" class="crossword-back" type="button">← Changer de niveau</button>
+          </div>
+          <div class="crossword-layout">
+            <div class="crossword-board-wrap"><div id="crossword-board" class="crossword-board" aria-label="Grille de mots croisés"></div></div>
+            <aside class="crossword-clues">
+              <div class="crossword-lives"><span>Vérifications restantes</span><strong id="crossword-lives">3</strong></div>
+              <div class="clue-columns">
+                <section><h3>Horizontales</h3><ol id="clues-across"></ol></section>
+                <section><h3>Verticales</h3><ol id="clues-down"></ol></section>
+              </div>
+              <button id="crossword-check" class="crossword-check" type="button">Vérifier mes réponses</button>
+              <p id="crossword-feedback" class="crossword-feedback" role="status"></p>
+            </aside>
+          </div>
+        </section>
       </section>
 
       <section class="page-view hidden" id="page-stats" data-view="stats">
