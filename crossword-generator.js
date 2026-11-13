@@ -85,9 +85,9 @@
           for (let i = 0; i < existing.answer.length; i++) {
             for (let j = 0; j < candidate.answer.length; j++) {
               if (existing.answer[i] !== candidate.answer[j]) continue;
-              const row = existing.row + (existing.dir === "down" ? i : 0) - (candidate.dir === "down" ? j : 0);
-              const col = existing.col + (existing.dir === "across" ? i : 0) - (candidate.dir === "across" ? j : 0);
               const dir = existing.dir === "across" ? "down" : "across";
+              const row = existing.row + (existing.dir === "down" ? i : 0) - (dir === "down" ? j : 0);
+              const col = existing.col + (existing.dir === "across" ? i : 0) - (dir === "across" ? j : 0);
               const score = canPlace(grid, candidate, row, col, dir);
               if (score !== null && score > 0) options.push({ row, col, dir, score });
             }
